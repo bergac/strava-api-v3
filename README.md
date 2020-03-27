@@ -5,7 +5,7 @@ Official Strava Swagger (OAS2) can be found at https://developers.strava.com/swa
 The [Swagger Editor](https://editor.swagger.io/) is used to convert it to yaml.
 
 ### Example
-In `/lib` you can find the generated Strava API using Typescript and Axios.  
+In `/strava-v3-ts-axios` you can find the generated Strava API using Typescript and Axios.  
 See script `generate-api.sh` for which command is used to generate the code.
 
 ### Creating a client

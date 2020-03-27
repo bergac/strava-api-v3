@@ -1,0 +1,41 @@
+{
+  "name": "@bergac/strava-v3-ts-axios",
+  "version": "0.0.3",
+  "description": "Typescript Strava API using Axios",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "strava",
+    "axios"
+  ],
+  "homepage": "https://github.com/bergac/strava-api-v3#readme",
+  "author": "Anne van den Berg",
+  "license": "ISC",
+  "files": [
+    "lib/**/*",
+    "dist/**/*",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bergac/strava-api-v3.git"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "peerDependencies": {
+    "@types/node": "^12.12.31",
+    "typescript": "^3.8.3"
+  },
+  "bugs": {
+    "url": "https://github.com/bergac/strava-api-v3/issues"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {}
+}
