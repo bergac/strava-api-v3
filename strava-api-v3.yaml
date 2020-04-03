@@ -3778,7 +3778,9 @@ components:
       type: object
       properties:
         errors:
-          $ref: '#/components/schemas/StravaError'
+          type: array
+          items:
+            $ref: '#/components/schemas/StravaError'
         message:
           type: string
   securitySchemes:
