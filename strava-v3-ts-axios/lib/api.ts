@@ -30,68 +30,69 @@ export interface ActivityStats {
      * @type {number}
      * @memberof ActivityStats
      */
-    biggestRideDistance?: number;
+    biggest_ride_distance?: number;
     /**
      * The highest climb ridden by the athlete.
      * @type {number}
      * @memberof ActivityStats
      */
-    biggestClimbElevationGain?: number;
+    biggest_climb_elevation_gain?: number;
     /**
      *
      * @type {ActivityTotal}
      * @memberof ActivityStats
      */
-    recentRideTotals?: ActivityTotal;
+    recent_ride_totals?: ActivityTotal;
     /**
      *
      * @type {ActivityTotal}
      * @memberof ActivityStats
      */
-    recentRunTotals?: ActivityTotal;
+    recent_run_totals?: ActivityTotal;
     /**
      *
      * @type {ActivityTotal}
      * @memberof ActivityStats
      */
-    recentSwimTotals?: ActivityTotal;
+    recent_swim_totals?: ActivityTotal;
     /**
      *
      * @type {ActivityTotal}
      * @memberof ActivityStats
      */
-    ytdRideTotals?: ActivityTotal;
+    ytd_ride_totals?: ActivityTotal;
     /**
      *
      * @type {ActivityTotal}
      * @memberof ActivityStats
      */
-    ytdRunTotals?: ActivityTotal;
+    ytd_run_totals?: ActivityTotal;
     /**
      *
      * @type {ActivityTotal}
      * @memberof ActivityStats
      */
-    ytdSwimTotals?: ActivityTotal;
+    ytd_swim_totals?: ActivityTotal;
     /**
      *
      * @type {ActivityTotal}
      * @memberof ActivityStats
      */
-    allRideTotals?: ActivityTotal;
+    all_ride_totals?: ActivityTotal;
     /**
      *
      * @type {ActivityTotal}
      * @memberof ActivityStats
      */
-    allRunTotals?: ActivityTotal;
+    all_run_totals?: ActivityTotal;
     /**
      *
      * @type {ActivityTotal}
      * @memberof ActivityStats
      */
-    allSwimTotals?: ActivityTotal;
+    all_swim_totals?: ActivityTotal;
 }
+
 /**
  * A roll-up of metrics pertaining to a set of activities. Values are in seconds and meters.
  * @export
@@ -115,26 +116,27 @@ export interface ActivityTotal {
      * @type {number}
      * @memberof ActivityTotal
      */
-    movingTime?: number;
+    moving_time?: number;
     /**
      * The total elapsed time of the considered activities.
      * @type {number}
      * @memberof ActivityTotal
      */
-    elapsedTime?: number;
+    elapsed_time?: number;
     /**
      * The total elevation gain of the considered activities.
      * @type {number}
      * @memberof ActivityTotal
      */
-    elevationGain?: number;
+    elevation_gain?: number;
     /**
      * The total number of achievements of the considered activities.
      * @type {number}
      * @memberof ActivityTotal
      */
-    achievementCount?: number;
+    achievement_count?: number;
 }
+
 /**
  * An enumeration of the types an activity may have.
  * @export
@@ -197,7 +199,7 @@ export interface ActivityZone {
      * @type {TimedZoneDistribution}
      * @memberof ActivityZone
      */
-    distributionBuckets?: TimedZoneDistribution;
+    distribution_buckets?: TimedZoneDistribution;
     /**
      *
      * @type {string}
@@ -209,7 +211,7 @@ export interface ActivityZone {
      * @type {boolean}
      * @memberof ActivityZone
      */
-    sensorBased?: boolean;
+    sensor_based?: boolean;
     /**
      *
      * @type {number}
@@ -221,7 +223,7 @@ export interface ActivityZone {
      * @type {boolean}
      * @memberof ActivityZone
      */
-    customZones?: boolean;
+    custom_zones?: boolean;
     /**
      *
      * @type {number}
@@ -231,9 +233,9 @@ export interface ActivityZone {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum ActivityZoneTypeEnum {
     Heartrate = 'heartrate',
     Power = 'power'
@@ -250,7 +252,7 @@ export interface AltitudeStream {
      * @type {number}
      * @memberof AltitudeStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -262,7 +264,7 @@ export interface AltitudeStream {
      * @type {string}
      * @memberof AltitudeStream
      */
-    seriesType?: AltitudeStreamSeriesTypeEnum;
+    series_type?: AltitudeStreamSeriesTypeEnum;
     /**
      * The sequence of altitude values for this stream, in meters
      * @type {Array<number>}
@@ -272,18 +274,19 @@ export interface AltitudeStream {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum AltitudeStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum AltitudeStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -302,6 +305,7 @@ export interface AltitudeStreamAllOf {
      */
     data?: Array<number>;
 }
+
 /**
  *
  * @export
@@ -313,7 +317,7 @@ export interface BaseStream {
      * @type {number}
      * @memberof BaseStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -325,22 +329,23 @@ export interface BaseStream {
      * @type {string}
      * @memberof BaseStream
      */
-    seriesType?: BaseStreamSeriesTypeEnum;
+    series_type?: BaseStreamSeriesTypeEnum;
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum BaseStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum BaseStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -357,7 +362,7 @@ export interface CadenceStream {
      * @type {number}
      * @memberof CadenceStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -369,7 +374,7 @@ export interface CadenceStream {
      * @type {string}
      * @memberof CadenceStream
      */
-    seriesType?: CadenceStreamSeriesTypeEnum;
+    series_type?: CadenceStreamSeriesTypeEnum;
     /**
      * The sequence of cadence values for this stream, in rotations per minute
      * @type {Array<number>}
@@ -379,18 +384,19 @@ export interface CadenceStream {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum CadenceStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum CadenceStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -409,6 +415,7 @@ export interface CadenceStreamAllOf {
      */
     data?: Array<number>;
 }
+
 /**
  *
  * @export
@@ -426,7 +433,7 @@ export interface ClubAnnouncement {
      * @type {number}
      * @memberof ClubAnnouncement
      */
-    clubId?: number;
+    club_id?: number;
     /**
      *
      * @type {SummaryAthlete}
@@ -438,7 +445,7 @@ export interface ClubAnnouncement {
      * @type {Date}
      * @memberof ClubAnnouncement
      */
-    createdAt?: Date;
+    created_at?: Date;
     /**
      * The content of this announcement
      * @type {string}
@@ -446,6 +453,7 @@ export interface ClubAnnouncement {
      */
     message?: string;
 }
+
 /**
  *
  * @export
@@ -463,7 +471,7 @@ export interface Comment {
      * @type {number}
      * @memberof Comment
      */
-    activityId?: number;
+    activity_id?: number;
     /**
      * The content of the comment
      * @type {string}
@@ -481,8 +489,9 @@ export interface Comment {
      * @type {Date}
      * @memberof Comment
      */
-    createdAt?: Date;
+    created_at?: Date;
 }
+
 /**
  *
  * @export
@@ -500,13 +509,13 @@ export interface DetailedActivity {
      * @type {string}
      * @memberof DetailedActivity
      */
-    externalId?: string;
+    external_id?: string;
     /**
      * The identifier of the upload that resulted in this activity
      * @type {number}
      * @memberof DetailedActivity
      */
-    uploadId?: number;
+    upload_id?: number;
     /**
      *
      * @type {MetaAthlete}
@@ -530,31 +539,31 @@ export interface DetailedActivity {
      * @type {number}
      * @memberof DetailedActivity
      */
-    movingTime?: number;
+    moving_time?: number;
     /**
      * The activity\'s elapsed time, in seconds
      * @type {number}
      * @memberof DetailedActivity
      */
-    elapsedTime?: number;
+    elapsed_time?: number;
     /**
      * The activity\'s total elevation gain.
      * @type {number}
      * @memberof DetailedActivity
      */
-    totalElevationGain?: number;
+    total_elevation_gain?: number;
     /**
      * The activity\'s highest elevation, in meters
      * @type {number}
      * @memberof DetailedActivity
      */
-    elevHigh?: number;
+    elev_high?: number;
     /**
      * The activity\'s lowest elevation, in meters
      * @type {number}
      * @memberof DetailedActivity
      */
-    elevLow?: number;
+    elev_low?: number;
     /**
      *
      * @type {ActivityType}
@@ -566,13 +575,13 @@ export interface DetailedActivity {
      * @type {Date}
      * @memberof DetailedActivity
      */
-    startDate?: Date;
+    start_date?: Date;
     /**
      * The time at which the activity was started in the local timezone.
      * @type {Date}
      * @memberof DetailedActivity
      */
-    startDateLocal?: Date;
+    start_date_local?: Date;
     /**
      * The timezone of the activity
      * @type {string}
@@ -584,49 +593,49 @@ export interface DetailedActivity {
      * @type {LatLng}
      * @memberof DetailedActivity
      */
-    startLatlng?: LatLng;
+    start_latlng?: LatLng;
     /**
      *
      * @type {LatLng}
      * @memberof DetailedActivity
      */
-    endLatlng?: LatLng;
+    end_latlng?: LatLng;
     /**
      * The number of achievements gained during this activity
      * @type {number}
      * @memberof DetailedActivity
      */
-    achievementCount?: number;
+    achievement_count?: number;
     /**
      * The number of kudos given for this activity
      * @type {number}
      * @memberof DetailedActivity
      */
-    kudosCount?: number;
+    kudos_count?: number;
     /**
      * The number of comments for this activity
      * @type {number}
      * @memberof DetailedActivity
      */
-    commentCount?: number;
+    comment_count?: number;
     /**
      * The number of athletes for taking part in a group activity
      * @type {number}
      * @memberof DetailedActivity
      */
-    athleteCount?: number;
+    athlete_count?: number;
     /**
      * The number of Instagram photos for this activity
      * @type {number}
      * @memberof DetailedActivity
      */
-    photoCount?: number;
+    photo_count?: number;
     /**
      * The number of Instagram and Strava photos for this activity
      * @type {number}
      * @memberof DetailedActivity
      */
-    totalPhotoCount?: number;
+    total_photo_count?: number;
     /**
      *
      * @type {PolylineMap}
@@ -668,37 +677,37 @@ export interface DetailedActivity {
      * @type {number}
      * @memberof DetailedActivity
      */
-    workoutType?: number;
+    workout_type?: number;
     /**
      * The unique identifier of the upload in string format
      * @type {string}
      * @memberof DetailedActivity
      */
-    uploadIdStr?: string;
+    upload_id_str?: string;
     /**
      * The activity\'s average speed, in meters per second
      * @type {number}
      * @memberof DetailedActivity
      */
-    averageSpeed?: number;
+    average_speed?: number;
     /**
      * The activity\'s max speed, in meters per second
      * @type {number}
      * @memberof DetailedActivity
      */
-    maxSpeed?: number;
+    max_speed?: number;
     /**
      * Whether the logged-in athlete has kudoed this activity
      * @type {boolean}
      * @memberof DetailedActivity
      */
-    hasKudoed?: boolean;
+    has_kudoed?: boolean;
     /**
      * The id of the gear for the activity
      * @type {string}
      * @memberof DetailedActivity
      */
-    gearId?: string;
+    gear_id?: string;
     /**
      * The total work done in kilojoules during this activity. Rides only
      * @type {number}
@@ -710,25 +719,25 @@ export interface DetailedActivity {
      * @type {number}
      * @memberof DetailedActivity
      */
-    averageWatts?: number;
+    average_watts?: number;
     /**
      * Whether the watts are from a power meter, false if estimated
      * @type {boolean}
      * @memberof DetailedActivity
      */
-    deviceWatts?: boolean;
+    device_watts?: boolean;
     /**
      * Rides with power meter data only
      * @type {number}
      * @memberof DetailedActivity
      */
-    maxWatts?: number;
+    max_watts?: number;
     /**
      * Similar to Normalized Power. Rides with power meter data only
      * @type {number}
      * @memberof DetailedActivity
      */
-    weightedAverageWatts?: number;
+    weighted_average_watts?: number;
     /**
      * The description of the activity
      * @type {string}
@@ -758,31 +767,31 @@ export interface DetailedActivity {
      * @type {Array<DetailedSegmentEffort>}
      * @memberof DetailedActivity
      */
-    segmentEfforts?: Array<DetailedSegmentEffort>;
+    segment_efforts?: Array<DetailedSegmentEffort>;
     /**
      * The name of the device used to record the activity
      * @type {string}
      * @memberof DetailedActivity
      */
-    deviceName?: string;
+    device_name?: string;
     /**
      * The token used to embed a Strava activity
      * @type {string}
      * @memberof DetailedActivity
      */
-    embedToken?: string;
+    embed_token?: string;
     /**
      * The splits of this activity in metric units (for runs)
      * @type {Array<Split>}
      * @memberof DetailedActivity
      */
-    splitsMetric?: Array<Split>;
+    splits_metric?: Array<Split>;
     /**
      * The splits of this activity in imperial units (for runs)
      * @type {Array<Split>}
      * @memberof DetailedActivity
      */
-    splitsStandard?: Array<Split>;
+    splits_standard?: Array<Split>;
     /**
      *
      * @type {Array<object>}
@@ -794,8 +803,9 @@ export interface DetailedActivity {
      * @type {Array<DetailedSegmentEffort>}
      * @memberof DetailedActivity
      */
-    bestEfforts?: Array<DetailedSegmentEffort>;
+    best_efforts?: Array<DetailedSegmentEffort>;
 }
+
 /**
  *
  * @export
@@ -831,31 +841,31 @@ export interface DetailedActivityAllOf {
      * @type {Array<DetailedSegmentEffort>}
      * @memberof DetailedActivityAllOf
      */
-    segmentEfforts?: Array<DetailedSegmentEffort>;
+    segment_efforts?: Array<DetailedSegmentEffort>;
     /**
      * The name of the device used to record the activity
      * @type {string}
      * @memberof DetailedActivityAllOf
      */
-    deviceName?: string;
+    device_name?: string;
     /**
      * The token used to embed a Strava activity
      * @type {string}
      * @memberof DetailedActivityAllOf
      */
-    embedToken?: string;
+    embed_token?: string;
     /**
      * The splits of this activity in metric units (for runs)
      * @type {Array<Split>}
      * @memberof DetailedActivityAllOf
      */
-    splitsMetric?: Array<Split>;
+    splits_metric?: Array<Split>;
     /**
      * The splits of this activity in imperial units (for runs)
      * @type {Array<Split>}
      * @memberof DetailedActivityAllOf
      */
-    splitsStandard?: Array<Split>;
+    splits_standard?: Array<Split>;
     /**
      *
      * @type {Array<object>}
@@ -867,8 +877,9 @@ export interface DetailedActivityAllOf {
      * @type {Array<DetailedSegmentEffort>}
      * @memberof DetailedActivityAllOf
      */
-    bestEfforts?: Array<DetailedSegmentEffort>;
+    best_efforts?: Array<DetailedSegmentEffort>;
 }
+
 /**
  *
  * @export
@@ -886,7 +897,7 @@ export interface DetailedAthlete {
      * @type {number}
      * @memberof DetailedAthlete
      */
-    resourceState?: number;
+    resource_state?: number;
     /**
      * The athlete\'s first name.
      * @type {string}
@@ -904,7 +915,7 @@ export interface DetailedAthlete {
      * @type {string}
      * @memberof DetailedAthlete
      */
-    profileMedium?: string;
+    profile_medium?: string;
     /**
      * URL to a 124x124 pixel profile picture.
      * @type {string}
@@ -952,31 +963,31 @@ export interface DetailedAthlete {
      * @type {Date}
      * @memberof DetailedAthlete
      */
-    createdAt?: Date;
+    created_at?: Date;
     /**
      * The time at which the athlete was last updated.
      * @type {Date}
      * @memberof DetailedAthlete
      */
-    updatedAt?: Date;
+    updated_at?: Date;
     /**
      * The athlete\'s follower count.
      * @type {number}
      * @memberof DetailedAthlete
      */
-    followerCount?: number;
+    follower_count?: number;
     /**
      * The athlete\'s friend count.
      * @type {number}
      * @memberof DetailedAthlete
      */
-    friendCount?: number;
+    friend_count?: number;
     /**
      * The athlete\'s preferred unit system.
      * @type {string}
      * @memberof DetailedAthlete
      */
-    measurementPreference?: DetailedAthleteMeasurementPreferenceEnum;
+    measurement_preference?: DetailedAthleteMeasurementPreferenceEnum;
     /**
      * The athlete\'s FTP (Functional Threshold Power).
      * @type {number}
@@ -1010,17 +1021,18 @@ export interface DetailedAthlete {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum DetailedAthleteSexEnum {
     M = 'M',
     F = 'F'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum DetailedAthleteMeasurementPreferenceEnum {
     Feet = 'feet',
     Meters = 'meters'
@@ -1037,19 +1049,19 @@ export interface DetailedAthleteAllOf {
      * @type {number}
      * @memberof DetailedAthleteAllOf
      */
-    followerCount?: number;
+    follower_count?: number;
     /**
      * The athlete\'s friend count.
      * @type {number}
      * @memberof DetailedAthleteAllOf
      */
-    friendCount?: number;
+    friend_count?: number;
     /**
      * The athlete\'s preferred unit system.
      * @type {string}
      * @memberof DetailedAthleteAllOf
      */
-    measurementPreference?: DetailedAthleteAllOfMeasurementPreferenceEnum;
+    measurement_preference?: DetailedAthleteAllOfMeasurementPreferenceEnum;
     /**
      * The athlete\'s FTP (Functional Threshold Power).
      * @type {number}
@@ -1083,9 +1095,9 @@ export interface DetailedAthleteAllOf {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum DetailedAthleteAllOfMeasurementPreferenceEnum {
     Feet = 'feet',
     Meters = 'meters'
@@ -1108,7 +1120,7 @@ export interface DetailedClub {
      * @type {number}
      * @memberof DetailedClub
      */
-    resourceState?: number;
+    resource_state?: number;
     /**
      * The club\'s name.
      * @type {string}
@@ -1120,25 +1132,25 @@ export interface DetailedClub {
      * @type {string}
      * @memberof DetailedClub
      */
-    profileMedium?: string;
+    profile_medium?: string;
     /**
      * URL to a ~1185x580 pixel cover photo.
      * @type {string}
      * @memberof DetailedClub
      */
-    coverPhoto?: string;
+    cover_photo?: string;
     /**
      * URL to a ~360x176  pixel cover photo.
      * @type {string}
      * @memberof DetailedClub
      */
-    coverPhotoSmall?: string;
+    cover_photo_small?: string;
     /**
      *
      * @type {string}
      * @memberof DetailedClub
      */
-    sportType?: DetailedClubSportTypeEnum;
+    sport_type?: DetailedClubSportTypeEnum;
     /**
      * The club\'s city.
      * @type {string}
@@ -1168,7 +1180,7 @@ export interface DetailedClub {
      * @type {number}
      * @memberof DetailedClub
      */
-    memberCount?: number;
+    member_count?: number;
     /**
      * Whether the club is featured or not.
      * @type {boolean}
@@ -1210,23 +1222,24 @@ export interface DetailedClub {
      * @type {number}
      * @memberof DetailedClub
      */
-    followingCount?: number;
+    following_count?: number;
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum DetailedClubSportTypeEnum {
     Cycling = 'cycling',
     Running = 'running',
     Triathlon = 'triathlon',
     Other = 'other'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum DetailedClubMembershipEnum {
     Member = 'member',
     Pending = 'pending'
@@ -1261,13 +1274,13 @@ export interface DetailedClubAllOf {
      * @type {number}
      * @memberof DetailedClubAllOf
      */
-    followingCount?: number;
+    following_count?: number;
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum DetailedClubAllOfMembershipEnum {
     Member = 'member',
     Pending = 'pending'
@@ -1290,7 +1303,7 @@ export interface DetailedGear {
      * @type {number}
      * @memberof DetailedGear
      */
-    resourceState?: number;
+    resource_state?: number;
     /**
      * Whether this gear\'s is the owner\'s default one.
      * @type {boolean}
@@ -1314,19 +1327,19 @@ export interface DetailedGear {
      * @type {string}
      * @memberof DetailedGear
      */
-    brandName?: string;
+    brand_name?: string;
     /**
      * The gear\'s model name.
      * @type {string}
      * @memberof DetailedGear
      */
-    modelName?: string;
+    model_name?: string;
     /**
      * The gear\'s frame type (bike only).
      * @type {number}
      * @memberof DetailedGear
      */
-    frameType?: number;
+    frame_type?: number;
     /**
      * The gear\'s description.
      * @type {string}
@@ -1334,6 +1347,7 @@ export interface DetailedGear {
      */
     description?: string;
 }
+
 /**
  *
  * @export
@@ -1345,19 +1359,19 @@ export interface DetailedGearAllOf {
      * @type {string}
      * @memberof DetailedGearAllOf
      */
-    brandName?: string;
+    brand_name?: string;
     /**
      * The gear\'s model name.
      * @type {string}
      * @memberof DetailedGearAllOf
      */
-    modelName?: string;
+    model_name?: string;
     /**
      * The gear\'s frame type (bike only).
      * @type {number}
      * @memberof DetailedGearAllOf
      */
-    frameType?: number;
+    frame_type?: number;
     /**
      * The gear\'s description.
      * @type {string}
@@ -1365,6 +1379,7 @@ export interface DetailedGearAllOf {
      */
     description?: string;
 }
+
 /**
  *
  * @export
@@ -1388,7 +1403,7 @@ export interface DetailedSegment {
      * @type {string}
      * @memberof DetailedSegment
      */
-    activityType?: DetailedSegmentActivityTypeEnum;
+    activity_type?: DetailedSegmentActivityTypeEnum;
     /**
      * The segment\'s distance, in meters
      * @type {number}
@@ -1400,43 +1415,43 @@ export interface DetailedSegment {
      * @type {number}
      * @memberof DetailedSegment
      */
-    averageGrade?: number;
+    average_grade?: number;
     /**
      * The segments\'s maximum grade, in percents
      * @type {number}
      * @memberof DetailedSegment
      */
-    maximumGrade?: number;
+    maximum_grade?: number;
     /**
      * The segments\'s highest elevation, in meters
      * @type {number}
      * @memberof DetailedSegment
      */
-    elevationHigh?: number;
+    elevation_high?: number;
     /**
      * The segments\'s lowest elevation, in meters
      * @type {number}
      * @memberof DetailedSegment
      */
-    elevationLow?: number;
+    elevation_low?: number;
     /**
      *
      * @type {LatLng}
      * @memberof DetailedSegment
      */
-    startLatlng?: LatLng;
+    start_latlng?: LatLng;
     /**
      *
      * @type {LatLng}
      * @memberof DetailedSegment
      */
-    endLatlng?: LatLng;
+    end_latlng?: LatLng;
     /**
      * The category of the climb [0, 5]. Higher is harder ie. 5 is Hors catégorie, 0 is uncategorized in climb_category.
      * @type {number}
      * @memberof DetailedSegment
      */
-    climbCategory?: number;
+    climb_category?: number;
     /**
      * The segments\'s city.
      * @type {string}
@@ -1466,25 +1481,25 @@ export interface DetailedSegment {
      * @type {SummarySegmentEffort}
      * @memberof DetailedSegment
      */
-    athletePrEffort?: SummarySegmentEffort;
+    athlete_pr_effort?: SummarySegmentEffort;
     /**
      * The time at which the segment was created.
      * @type {Date}
      * @memberof DetailedSegment
      */
-    createdAt?: Date;
+    created_at?: Date;
     /**
      * The time at which the segment was last updated.
      * @type {Date}
      * @memberof DetailedSegment
      */
-    updatedAt?: Date;
+    updated_at?: Date;
     /**
      * The segment\'s total elevation gain.
      * @type {number}
      * @memberof DetailedSegment
      */
-    totalElevationGain?: number;
+    total_elevation_gain?: number;
     /**
      *
      * @type {PolylineMap}
@@ -1496,13 +1511,13 @@ export interface DetailedSegment {
      * @type {number}
      * @memberof DetailedSegment
      */
-    effortCount?: number;
+    effort_count?: number;
     /**
      * The number of unique athletes who have an effort for this segment
      * @type {number}
      * @memberof DetailedSegment
      */
-    athleteCount?: number;
+    athlete_count?: number;
     /**
      * Whether this segment is considered hazardous
      * @type {boolean}
@@ -1514,13 +1529,13 @@ export interface DetailedSegment {
      * @type {number}
      * @memberof DetailedSegment
      */
-    starCount?: number;
+    star_count?: number;
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum DetailedSegmentActivityTypeEnum {
     Ride = 'Ride',
     Run = 'Run'
@@ -1537,19 +1552,19 @@ export interface DetailedSegmentAllOf {
      * @type {Date}
      * @memberof DetailedSegmentAllOf
      */
-    createdAt?: Date;
+    created_at?: Date;
     /**
      * The time at which the segment was last updated.
      * @type {Date}
      * @memberof DetailedSegmentAllOf
      */
-    updatedAt?: Date;
+    updated_at?: Date;
     /**
      * The segment\'s total elevation gain.
      * @type {number}
      * @memberof DetailedSegmentAllOf
      */
-    totalElevationGain?: number;
+    total_elevation_gain?: number;
     /**
      *
      * @type {PolylineMap}
@@ -1561,13 +1576,13 @@ export interface DetailedSegmentAllOf {
      * @type {number}
      * @memberof DetailedSegmentAllOf
      */
-    effortCount?: number;
+    effort_count?: number;
     /**
      * The number of unique athletes who have an effort for this segment
      * @type {number}
      * @memberof DetailedSegmentAllOf
      */
-    athleteCount?: number;
+    athlete_count?: number;
     /**
      * Whether this segment is considered hazardous
      * @type {boolean}
@@ -1579,8 +1594,9 @@ export interface DetailedSegmentAllOf {
      * @type {number}
      * @memberof DetailedSegmentAllOf
      */
-    starCount?: number;
+    star_count?: number;
 }
+
 /**
  *
  * @export
@@ -1598,19 +1614,19 @@ export interface DetailedSegmentEffort {
      * @type {number}
      * @memberof DetailedSegmentEffort
      */
-    elapsedTime?: number;
+    elapsed_time?: number;
     /**
      * The time at which the effort was started.
      * @type {Date}
      * @memberof DetailedSegmentEffort
      */
-    startDate?: Date;
+    start_date?: Date;
     /**
      * The time at which the effort was started in the local timezone.
      * @type {Date}
      * @memberof DetailedSegmentEffort
      */
-    startDateLocal?: Date;
+    start_date_local?: Date;
     /**
      * The effort\'s distance in meters
      * @type {number}
@@ -1622,7 +1638,7 @@ export interface DetailedSegmentEffort {
      * @type {boolean}
      * @memberof DetailedSegmentEffort
      */
-    isKom?: boolean;
+    is_kom?: boolean;
     /**
      * The name of the segment on which this effort was performed
      * @type {string}
@@ -1646,49 +1662,49 @@ export interface DetailedSegmentEffort {
      * @type {number}
      * @memberof DetailedSegmentEffort
      */
-    movingTime?: number;
+    moving_time?: number;
     /**
      * The start index of this effort in its activity\'s stream
      * @type {number}
      * @memberof DetailedSegmentEffort
      */
-    startIndex?: number;
+    start_index?: number;
     /**
      * The end index of this effort in its activity\'s stream
      * @type {number}
      * @memberof DetailedSegmentEffort
      */
-    endIndex?: number;
+    end_index?: number;
     /**
      * The effort\'s average cadence
      * @type {number}
      * @memberof DetailedSegmentEffort
      */
-    averageCadence?: number;
+    average_cadence?: number;
     /**
      * The average wattage of this effort
      * @type {number}
      * @memberof DetailedSegmentEffort
      */
-    averageWatts?: number;
+    average_watts?: number;
     /**
      * For riding efforts, whether the wattage was reported by a dedicated recording device
      * @type {boolean}
      * @memberof DetailedSegmentEffort
      */
-    deviceWatts?: boolean;
+    device_watts?: boolean;
     /**
      * The heart heart rate of the athlete during this effort
      * @type {number}
      * @memberof DetailedSegmentEffort
      */
-    averageHeartrate?: number;
+    average_heartrate?: number;
     /**
      * The maximum heart rate of the athlete during this effort
      * @type {number}
      * @memberof DetailedSegmentEffort
      */
-    maxHeartrate?: number;
+    max_heartrate?: number;
     /**
      *
      * @type {SummarySegment}
@@ -1700,13 +1716,13 @@ export interface DetailedSegmentEffort {
      * @type {number}
      * @memberof DetailedSegmentEffort
      */
-    komRank?: number;
+    kom_rank?: number;
     /**
      * The rank of the effort on the athlete\'s leaderboard if it belongs in the top 3 at the time of upload
      * @type {number}
      * @memberof DetailedSegmentEffort
      */
-    prRank?: number;
+    pr_rank?: number;
     /**
      * Whether this effort should be hidden when viewed within an activity
      * @type {boolean}
@@ -1714,6 +1730,7 @@ export interface DetailedSegmentEffort {
      */
     hidden?: boolean;
 }
+
 /**
  *
  * @export
@@ -1743,49 +1760,49 @@ export interface DetailedSegmentEffortAllOf {
      * @type {number}
      * @memberof DetailedSegmentEffortAllOf
      */
-    movingTime?: number;
+    moving_time?: number;
     /**
      * The start index of this effort in its activity\'s stream
      * @type {number}
      * @memberof DetailedSegmentEffortAllOf
      */
-    startIndex?: number;
+    start_index?: number;
     /**
      * The end index of this effort in its activity\'s stream
      * @type {number}
      * @memberof DetailedSegmentEffortAllOf
      */
-    endIndex?: number;
+    end_index?: number;
     /**
      * The effort\'s average cadence
      * @type {number}
      * @memberof DetailedSegmentEffortAllOf
      */
-    averageCadence?: number;
+    average_cadence?: number;
     /**
      * The average wattage of this effort
      * @type {number}
      * @memberof DetailedSegmentEffortAllOf
      */
-    averageWatts?: number;
+    average_watts?: number;
     /**
      * For riding efforts, whether the wattage was reported by a dedicated recording device
      * @type {boolean}
      * @memberof DetailedSegmentEffortAllOf
      */
-    deviceWatts?: boolean;
+    device_watts?: boolean;
     /**
      * The heart heart rate of the athlete during this effort
      * @type {number}
      * @memberof DetailedSegmentEffortAllOf
      */
-    averageHeartrate?: number;
+    average_heartrate?: number;
     /**
      * The maximum heart rate of the athlete during this effort
      * @type {number}
      * @memberof DetailedSegmentEffortAllOf
      */
-    maxHeartrate?: number;
+    max_heartrate?: number;
     /**
      *
      * @type {SummarySegment}
@@ -1797,13 +1814,13 @@ export interface DetailedSegmentEffortAllOf {
      * @type {number}
      * @memberof DetailedSegmentEffortAllOf
      */
-    komRank?: number;
+    kom_rank?: number;
     /**
      * The rank of the effort on the athlete\'s leaderboard if it belongs in the top 3 at the time of upload
      * @type {number}
      * @memberof DetailedSegmentEffortAllOf
      */
-    prRank?: number;
+    pr_rank?: number;
     /**
      * Whether this effort should be hidden when viewed within an activity
      * @type {boolean}
@@ -1811,6 +1828,7 @@ export interface DetailedSegmentEffortAllOf {
      */
     hidden?: boolean;
 }
+
 /**
  *
  * @export
@@ -1822,7 +1840,7 @@ export interface DistanceStream {
      * @type {number}
      * @memberof DistanceStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -1834,7 +1852,7 @@ export interface DistanceStream {
      * @type {string}
      * @memberof DistanceStream
      */
-    seriesType?: DistanceStreamSeriesTypeEnum;
+    series_type?: DistanceStreamSeriesTypeEnum;
     /**
      * The sequence of distance values for this stream, in meters
      * @type {Array<number>}
@@ -1844,18 +1862,19 @@ export interface DistanceStream {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum DistanceStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum DistanceStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -1874,6 +1893,7 @@ export interface DistanceStreamAllOf {
      */
     data?: Array<number>;
 }
+
 /**
  *
  * @export
@@ -1887,6 +1907,7 @@ export interface ExplorerResponse {
      */
     segments?: Array<ExplorerSegment>;
 }
+
 /**
  *
  * @export
@@ -1910,37 +1931,37 @@ export interface ExplorerSegment {
      * @type {number}
      * @memberof ExplorerSegment
      */
-    climbCategory?: number;
+    climb_category?: number;
     /**
      * The description for the category of the climb
      * @type {string}
      * @memberof ExplorerSegment
      */
-    climbCategoryDesc?: ExplorerSegmentClimbCategoryDescEnum;
+    climb_category_desc?: ExplorerSegmentClimbCategoryDescEnum;
     /**
      * The segment\'s average grade, in percents
      * @type {number}
      * @memberof ExplorerSegment
      */
-    avgGrade?: number;
+    avg_grade?: number;
     /**
      *
      * @type {LatLng}
      * @memberof ExplorerSegment
      */
-    startLatlng?: LatLng;
+    start_latlng?: LatLng;
     /**
      *
      * @type {LatLng}
      * @memberof ExplorerSegment
      */
-    endLatlng?: LatLng;
+    end_latlng?: LatLng;
     /**
      * The segments\'s evelation difference, in meters
      * @type {number}
      * @memberof ExplorerSegment
      */
-    elevDifference?: number;
+    elev_difference?: number;
     /**
      * The segment\'s distance, in meters
      * @type {number}
@@ -1956,9 +1977,9 @@ export interface ExplorerSegment {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum ExplorerSegmentClimbCategoryDescEnum {
     NC = 'NC',
     _4 = '4',
@@ -1987,6 +2008,7 @@ export interface Fault {
      */
     message?: string;
 }
+
 /**
  *
  * @export
@@ -1998,7 +2020,7 @@ export interface HeartRateZoneRanges {
      * @type {boolean}
      * @memberof HeartRateZoneRanges
      */
-    customZones?: boolean;
+    custom_zones?: boolean;
     /**
      *
      * @type {ZoneRanges}
@@ -2006,6 +2028,7 @@ export interface HeartRateZoneRanges {
      */
     zones?: ZoneRanges;
 }
+
 /**
  *
  * @export
@@ -2017,7 +2040,7 @@ export interface HeartrateStream {
      * @type {number}
      * @memberof HeartrateStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -2029,7 +2052,7 @@ export interface HeartrateStream {
      * @type {string}
      * @memberof HeartrateStream
      */
-    seriesType?: HeartrateStreamSeriesTypeEnum;
+    series_type?: HeartrateStreamSeriesTypeEnum;
     /**
      * The sequence of heart rate values for this stream, in beats per minute
      * @type {Array<number>}
@@ -2039,18 +2062,19 @@ export interface HeartrateStream {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum HeartrateStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum HeartrateStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -2069,6 +2093,7 @@ export interface HeartrateStreamAllOf {
      */
     data?: Array<number>;
 }
+
 /**
  *
  * @export
@@ -2082,6 +2107,7 @@ export interface InlineObject {
      */
     starred: boolean;
 }
+
 /**
  *
  * @export
@@ -2105,13 +2131,13 @@ export interface InlineObject1 {
      * @type {Date}
      * @memberof InlineObject1
      */
-    startDateLocal: Date;
+    start_date_local: Date;
     /**
      * In seconds.
      * @type {number}
      * @memberof InlineObject1
      */
-    elapsedTime: number;
+    elapsed_time: number;
     /**
      * Description of the activity.
      * @type {string}
@@ -2137,6 +2163,7 @@ export interface InlineObject1 {
      */
     commute?: number;
 }
+
 /**
  *
  * @export
@@ -2178,19 +2205,19 @@ export interface InlineObject2 {
      * @type {string}
      * @memberof InlineObject2
      */
-    dataType?: InlineObject2DataTypeEnum;
+    data_type?: InlineObject2DataTypeEnum;
     /**
      * The desired external identifier of the resulting activity.
      * @type {string}
      * @memberof InlineObject2
      */
-    externalId?: string;
+    external_id?: string;
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum InlineObject2DataTypeEnum {
     Fit = 'fit',
     FitGz = 'fit.gz',
@@ -2229,13 +2256,13 @@ export interface Lap {
      * @type {number}
      * @memberof Lap
      */
-    averageCadence?: number;
+    average_cadence?: number;
     /**
      * The lap\'s average speed
      * @type {number}
      * @memberof Lap
      */
-    averageSpeed?: number;
+    average_speed?: number;
     /**
      * The lap\'s distance, in meters
      * @type {number}
@@ -2247,37 +2274,37 @@ export interface Lap {
      * @type {number}
      * @memberof Lap
      */
-    elapsedTime?: number;
+    elapsed_time?: number;
     /**
      * The start index of this effort in its activity\'s stream
      * @type {number}
      * @memberof Lap
      */
-    startIndex?: number;
+    start_index?: number;
     /**
      * The end index of this effort in its activity\'s stream
      * @type {number}
      * @memberof Lap
      */
-    endIndex?: number;
+    end_index?: number;
     /**
      * The index of this lap in the activity it belongs to
      * @type {number}
      * @memberof Lap
      */
-    lapIndex?: number;
+    lap_index?: number;
     /**
      * The maximum speed of this lat, in meters per second
      * @type {number}
      * @memberof Lap
      */
-    maxSpeed?: number;
+    max_speed?: number;
     /**
      * The lap\'s moving time, in seconds
      * @type {number}
      * @memberof Lap
      */
-    movingTime?: number;
+    moving_time?: number;
     /**
      * The name of the lap
      * @type {string}
@@ -2289,7 +2316,7 @@ export interface Lap {
      * @type {number}
      * @memberof Lap
      */
-    paceZone?: number;
+    pace_zone?: number;
     /**
      *
      * @type {number}
@@ -2301,20 +2328,21 @@ export interface Lap {
      * @type {Date}
      * @memberof Lap
      */
-    startDate?: Date;
+    start_date?: Date;
     /**
      * The time at which the lap was started in the local timezone.
      * @type {Date}
      * @memberof Lap
      */
-    startDateLocal?: Date;
+    start_date_local?: Date;
     /**
      * The elevation gain of this lap, in meters
      * @type {number}
      * @memberof Lap
      */
-    totalElevationGain?: number;
+    total_elevation_gain?: number;
 }
+
 /**
  * A pair of latitude/longitude coordinates, represented as an array of 2 floating point numbers.
  * @export
@@ -2322,6 +2350,7 @@ export interface Lap {
  */
 export interface LatLng extends Array<number> {
 }
+
 /**
  *
  * @export
@@ -2333,7 +2362,7 @@ export interface LatLngStream {
      * @type {number}
      * @memberof LatLngStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -2345,7 +2374,7 @@ export interface LatLngStream {
      * @type {string}
      * @memberof LatLngStream
      */
-    seriesType?: LatLngStreamSeriesTypeEnum;
+    series_type?: LatLngStreamSeriesTypeEnum;
     /**
      * The sequence of lat/long values for this stream
      * @type {Array<LatLng>}
@@ -2355,18 +2384,19 @@ export interface LatLngStream {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum LatLngStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum LatLngStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -2385,6 +2415,7 @@ export interface LatLngStreamAllOf {
      */
     data?: Array<LatLng>;
 }
+
 /**
  *
  * @export
@@ -2412,9 +2443,9 @@ export interface MembershipApplication {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum MembershipApplicationMembershipEnum {
     Member = 'member',
     Pending = 'pending'
@@ -2433,6 +2464,7 @@ export interface MetaActivity {
      */
     id?: number;
 }
+
 /**
  *
  * @export
@@ -2446,6 +2478,7 @@ export interface MetaAthlete {
      */
     id?: number;
 }
+
 /**
  *
  * @export
@@ -2463,7 +2496,7 @@ export interface MetaClub {
      * @type {number}
      * @memberof MetaClub
      */
-    resourceState?: number;
+    resource_state?: number;
     /**
      * The club\'s name.
      * @type {string}
@@ -2471,6 +2504,7 @@ export interface MetaClub {
      */
     name?: string;
 }
+
 /**
  *
  * @export
@@ -2482,7 +2516,7 @@ export interface MovingStream {
      * @type {number}
      * @memberof MovingStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -2494,7 +2528,7 @@ export interface MovingStream {
      * @type {string}
      * @memberof MovingStream
      */
-    seriesType?: MovingStreamSeriesTypeEnum;
+    series_type?: MovingStreamSeriesTypeEnum;
     /**
      * The sequence of moving values for this stream, as boolean values
      * @type {Array<boolean>}
@@ -2504,18 +2538,19 @@ export interface MovingStream {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum MovingStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum MovingStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -2534,6 +2569,7 @@ export interface MovingStreamAllOf {
      */
     data?: Array<boolean>;
 }
+
 /**
  *
  * @export
@@ -2553,6 +2589,7 @@ export interface PhotosSummary {
      */
     primary?: PhotosSummaryPrimary;
 }
+
 /**
  *
  * @export
@@ -2576,7 +2613,7 @@ export interface PhotosSummaryPrimary {
      * @type {string}
      * @memberof PhotosSummaryPrimary
      */
-    uniqueId?: string;
+    unique_id?: string;
     /**
      *
      * @type {{ [key: string]: string; }}
@@ -2584,6 +2621,7 @@ export interface PhotosSummaryPrimary {
      */
     urls?: { [key: string]: string; };
 }
+
 /**
  *
  * @export
@@ -2607,8 +2645,9 @@ export interface PolylineMap {
      * @type {string}
      * @memberof PolylineMap
      */
-    summaryPolyline?: string;
+    summary_polyline?: string;
 }
+
 /**
  *
  * @export
@@ -2620,7 +2659,7 @@ export interface PowerStream {
      * @type {number}
      * @memberof PowerStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -2632,7 +2671,7 @@ export interface PowerStream {
      * @type {string}
      * @memberof PowerStream
      */
-    seriesType?: PowerStreamSeriesTypeEnum;
+    series_type?: PowerStreamSeriesTypeEnum;
     /**
      * The sequence of power values for this stream, in watts
      * @type {Array<number>}
@@ -2642,18 +2681,19 @@ export interface PowerStream {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum PowerStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum PowerStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -2672,6 +2712,7 @@ export interface PowerStreamAllOf {
      */
     data?: Array<number>;
 }
+
 /**
  *
  * @export
@@ -2685,6 +2726,7 @@ export interface PowerZoneRanges {
      */
     zones?: ZoneRanges;
 }
+
 /**
  *
  * @export
@@ -2714,7 +2756,7 @@ export interface Route {
      * @type {number}
      * @memberof Route
      */
-    elevationGain?: number;
+    elevation_gain?: number;
     /**
      * The unique identifier of this route
      * @type {number}
@@ -2762,7 +2804,7 @@ export interface Route {
      * @type {number}
      * @memberof Route
      */
-    subType?: number;
+    sub_type?: number;
     /**
      * The segments traversed by this route
      * @type {Array<SummarySegment>}
@@ -2770,6 +2812,7 @@ export interface Route {
      */
     segments?: Array<SummarySegment>;
 }
+
 /**
  *
  * @export
@@ -2793,7 +2836,7 @@ export interface RunningRace {
      * @type {number}
      * @memberof RunningRace
      */
-    runningRaceType?: number;
+    running_race_type?: number;
     /**
      * The race\'s distance, in meters.
      * @type {number}
@@ -2805,7 +2848,7 @@ export interface RunningRace {
      * @type {Date}
      * @memberof RunningRace
      */
-    startDateLocal?: Date;
+    start_date_local?: Date;
     /**
      * The name of the city in which the race is taking place.
      * @type {string}
@@ -2829,13 +2872,13 @@ export interface RunningRace {
      * @type {Array<number>}
      * @memberof RunningRace
      */
-    routeIds?: Array<number>;
+    route_ids?: Array<number>;
     /**
      * The unit system in which the race should be displayed.
      * @type {string}
      * @memberof RunningRace
      */
-    measurementPreference?: RunningRaceMeasurementPreferenceEnum;
+    measurement_preference?: RunningRaceMeasurementPreferenceEnum;
     /**
      * The vanity URL of this race on Strava.
      * @type {string}
@@ -2847,13 +2890,13 @@ export interface RunningRace {
      * @type {string}
      * @memberof RunningRace
      */
-    websiteUrl?: string;
+    website_url?: string;
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum RunningRaceMeasurementPreferenceEnum {
     Feet = 'feet',
     Meters = 'meters'
@@ -2870,19 +2913,19 @@ export interface SegmentLeaderboard {
      * @type {number}
      * @memberof SegmentLeaderboard
      */
-    entryCount?: number;
+    entry_count?: number;
     /**
      * Deprecated, use entry_count
      * @type {number}
      * @memberof SegmentLeaderboard
      */
-    effortCount?: number;
+    effort_count?: number;
     /**
      *
      * @type {string}
      * @memberof SegmentLeaderboard
      */
-    komType?: SegmentLeaderboardKomTypeEnum;
+    kom_type?: SegmentLeaderboardKomTypeEnum;
     /**
      *
      * @type {Array<SegmentLeaderboardEntry>}
@@ -2892,9 +2935,9 @@ export interface SegmentLeaderboard {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum SegmentLeaderboardKomTypeEnum {
     Kom = 'kom',
     Cr = 'cr'
@@ -2911,31 +2954,31 @@ export interface SegmentLeaderboardEntry {
      * @type {string}
      * @memberof SegmentLeaderboardEntry
      */
-    athleteName?: string;
+    athlete_name?: string;
     /**
      * The elapsed of the segment effort associated with this entry
      * @type {number}
      * @memberof SegmentLeaderboardEntry
      */
-    elapsedTime?: number;
+    elapsed_time?: number;
     /**
      * The moving of the segment effort associated with this entry
      * @type {number}
      * @memberof SegmentLeaderboardEntry
      */
-    movingTime?: number;
+    moving_time?: number;
     /**
      * The time at which the effort was started.
      * @type {Date}
      * @memberof SegmentLeaderboardEntry
      */
-    startDate?: Date;
+    start_date?: Date;
     /**
      * The time at which the effort was started in the local timezone.
      * @type {Date}
      * @memberof SegmentLeaderboardEntry
      */
-    startDateLocal?: Date;
+    start_date_local?: Date;
     /**
      * The rank of this entry in the leaderboard
      * @type {number}
@@ -2943,6 +2986,7 @@ export interface SegmentLeaderboardEntry {
      */
     rank?: number;
 }
+
 /**
  *
  * @export
@@ -2954,7 +2998,7 @@ export interface SmoothGradeStream {
      * @type {number}
      * @memberof SmoothGradeStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -2966,7 +3010,7 @@ export interface SmoothGradeStream {
      * @type {string}
      * @memberof SmoothGradeStream
      */
-    seriesType?: SmoothGradeStreamSeriesTypeEnum;
+    series_type?: SmoothGradeStreamSeriesTypeEnum;
     /**
      * The sequence of grade values for this stream, as percents of a grade
      * @type {Array<number>}
@@ -2976,18 +3020,19 @@ export interface SmoothGradeStream {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum SmoothGradeStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum SmoothGradeStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -3006,6 +3051,7 @@ export interface SmoothGradeStreamAllOf {
      */
     data?: Array<number>;
 }
+
 /**
  *
  * @export
@@ -3017,7 +3063,7 @@ export interface SmoothVelocityStream {
      * @type {number}
      * @memberof SmoothVelocityStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -3029,7 +3075,7 @@ export interface SmoothVelocityStream {
      * @type {string}
      * @memberof SmoothVelocityStream
      */
-    seriesType?: SmoothVelocityStreamSeriesTypeEnum;
+    series_type?: SmoothVelocityStreamSeriesTypeEnum;
     /**
      * The sequence of velocity values for this stream, in meters per second
      * @type {Array<number>}
@@ -3039,18 +3085,19 @@ export interface SmoothVelocityStream {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum SmoothVelocityStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum SmoothVelocityStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -3069,6 +3116,7 @@ export interface SmoothVelocityStreamAllOf {
      */
     data?: Array<number>;
 }
+
 /**
  *
  * @export
@@ -3080,7 +3128,7 @@ export interface Split {
      * @type {number}
      * @memberof Split
      */
-    averageSpeed?: number;
+    average_speed?: number;
     /**
      * The distance of this split, in meters
      * @type {number}
@@ -3092,25 +3140,25 @@ export interface Split {
      * @type {number}
      * @memberof Split
      */
-    elapsedTime?: number;
+    elapsed_time?: number;
     /**
      * The elevation difference of this split, in meters
      * @type {number}
      * @memberof Split
      */
-    elevationDifference?: number;
+    elevation_difference?: number;
     /**
      * The pacing zone of this split
      * @type {number}
      * @memberof Split
      */
-    paceZone?: number;
+    pace_zone?: number;
     /**
      * The moving time of this split, in seconds
      * @type {number}
      * @memberof Split
      */
-    movingTime?: number;
+    moving_time?: number;
     /**
      * N/A
      * @type {number}
@@ -3118,6 +3166,7 @@ export interface Split {
      */
     split?: number;
 }
+
 /**
  *
  * @export
@@ -3143,6 +3192,7 @@ export interface StravaError {
      */
     resource?: string;
 }
+
 /**
  *
  * @export
@@ -3178,7 +3228,7 @@ export interface StreamSet {
      * @type {SmoothVelocityStream}
      * @memberof StreamSet
      */
-    velocitySmooth?: SmoothVelocityStream;
+    velocity_smooth?: SmoothVelocityStream;
     /**
      *
      * @type {HeartrateStream}
@@ -3214,8 +3264,9 @@ export interface StreamSet {
      * @type {SmoothGradeStream}
      * @memberof StreamSet
      */
-    gradeSmooth?: SmoothGradeStream;
+    grade_smooth?: SmoothGradeStream;
 }
+
 /**
  * An enumeration of the supported types of streams.
  * @export
@@ -3252,13 +3303,13 @@ export interface SummaryActivity {
      * @type {string}
      * @memberof SummaryActivity
      */
-    externalId?: string;
+    external_id?: string;
     /**
      * The identifier of the upload that resulted in this activity
      * @type {number}
      * @memberof SummaryActivity
      */
-    uploadId?: number;
+    upload_id?: number;
     /**
      *
      * @type {MetaAthlete}
@@ -3282,31 +3333,31 @@ export interface SummaryActivity {
      * @type {number}
      * @memberof SummaryActivity
      */
-    movingTime?: number;
+    moving_time?: number;
     /**
      * The activity\'s elapsed time, in seconds
      * @type {number}
      * @memberof SummaryActivity
      */
-    elapsedTime?: number;
+    elapsed_time?: number;
     /**
      * The activity\'s total elevation gain.
      * @type {number}
      * @memberof SummaryActivity
      */
-    totalElevationGain?: number;
+    total_elevation_gain?: number;
     /**
      * The activity\'s highest elevation, in meters
      * @type {number}
      * @memberof SummaryActivity
      */
-    elevHigh?: number;
+    elev_high?: number;
     /**
      * The activity\'s lowest elevation, in meters
      * @type {number}
      * @memberof SummaryActivity
      */
-    elevLow?: number;
+    elev_low?: number;
     /**
      *
      * @type {ActivityType}
@@ -3318,13 +3369,13 @@ export interface SummaryActivity {
      * @type {Date}
      * @memberof SummaryActivity
      */
-    startDate?: Date;
+    start_date?: Date;
     /**
      * The time at which the activity was started in the local timezone.
      * @type {Date}
      * @memberof SummaryActivity
      */
-    startDateLocal?: Date;
+    start_date_local?: Date;
     /**
      * The timezone of the activity
      * @type {string}
@@ -3336,49 +3387,49 @@ export interface SummaryActivity {
      * @type {LatLng}
      * @memberof SummaryActivity
      */
-    startLatlng?: LatLng;
+    start_latlng?: LatLng;
     /**
      *
      * @type {LatLng}
      * @memberof SummaryActivity
      */
-    endLatlng?: LatLng;
+    end_latlng?: LatLng;
     /**
      * The number of achievements gained during this activity
      * @type {number}
      * @memberof SummaryActivity
      */
-    achievementCount?: number;
+    achievement_count?: number;
     /**
      * The number of kudos given for this activity
      * @type {number}
      * @memberof SummaryActivity
      */
-    kudosCount?: number;
+    kudos_count?: number;
     /**
      * The number of comments for this activity
      * @type {number}
      * @memberof SummaryActivity
      */
-    commentCount?: number;
+    comment_count?: number;
     /**
      * The number of athletes for taking part in a group activity
      * @type {number}
      * @memberof SummaryActivity
      */
-    athleteCount?: number;
+    athlete_count?: number;
     /**
      * The number of Instagram photos for this activity
      * @type {number}
      * @memberof SummaryActivity
      */
-    photoCount?: number;
+    photo_count?: number;
     /**
      * The number of Instagram and Strava photos for this activity
      * @type {number}
      * @memberof SummaryActivity
      */
-    totalPhotoCount?: number;
+    total_photo_count?: number;
     /**
      *
      * @type {PolylineMap}
@@ -3420,37 +3471,37 @@ export interface SummaryActivity {
      * @type {number}
      * @memberof SummaryActivity
      */
-    workoutType?: number;
+    workout_type?: number;
     /**
      * The unique identifier of the upload in string format
      * @type {string}
      * @memberof SummaryActivity
      */
-    uploadIdStr?: string;
+    upload_id_str?: string;
     /**
      * The activity\'s average speed, in meters per second
      * @type {number}
      * @memberof SummaryActivity
      */
-    averageSpeed?: number;
+    average_speed?: number;
     /**
      * The activity\'s max speed, in meters per second
      * @type {number}
      * @memberof SummaryActivity
      */
-    maxSpeed?: number;
+    max_speed?: number;
     /**
      * Whether the logged-in athlete has kudoed this activity
      * @type {boolean}
      * @memberof SummaryActivity
      */
-    hasKudoed?: boolean;
+    has_kudoed?: boolean;
     /**
      * The id of the gear for the activity
      * @type {string}
      * @memberof SummaryActivity
      */
-    gearId?: string;
+    gear_id?: string;
     /**
      * The total work done in kilojoules during this activity. Rides only
      * @type {number}
@@ -3462,26 +3513,27 @@ export interface SummaryActivity {
      * @type {number}
      * @memberof SummaryActivity
      */
-    averageWatts?: number;
+    average_watts?: number;
     /**
      * Whether the watts are from a power meter, false if estimated
      * @type {boolean}
      * @memberof SummaryActivity
      */
-    deviceWatts?: boolean;
+    device_watts?: boolean;
     /**
      * Rides with power meter data only
      * @type {number}
      * @memberof SummaryActivity
      */
-    maxWatts?: number;
+    max_watts?: number;
     /**
      * Similar to Normalized Power. Rides with power meter data only
      * @type {number}
      * @memberof SummaryActivity
      */
-    weightedAverageWatts?: number;
+    weighted_average_watts?: number;
 }
+
 /**
  *
  * @export
@@ -3493,13 +3545,13 @@ export interface SummaryActivityAllOf {
      * @type {string}
      * @memberof SummaryActivityAllOf
      */
-    externalId?: string;
+    external_id?: string;
     /**
      * The identifier of the upload that resulted in this activity
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    uploadId?: number;
+    upload_id?: number;
     /**
      *
      * @type {MetaAthlete}
@@ -3523,31 +3575,31 @@ export interface SummaryActivityAllOf {
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    movingTime?: number;
+    moving_time?: number;
     /**
      * The activity\'s elapsed time, in seconds
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    elapsedTime?: number;
+    elapsed_time?: number;
     /**
      * The activity\'s total elevation gain.
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    totalElevationGain?: number;
+    total_elevation_gain?: number;
     /**
      * The activity\'s highest elevation, in meters
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    elevHigh?: number;
+    elev_high?: number;
     /**
      * The activity\'s lowest elevation, in meters
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    elevLow?: number;
+    elev_low?: number;
     /**
      *
      * @type {ActivityType}
@@ -3559,13 +3611,13 @@ export interface SummaryActivityAllOf {
      * @type {Date}
      * @memberof SummaryActivityAllOf
      */
-    startDate?: Date;
+    start_date?: Date;
     /**
      * The time at which the activity was started in the local timezone.
      * @type {Date}
      * @memberof SummaryActivityAllOf
      */
-    startDateLocal?: Date;
+    start_date_local?: Date;
     /**
      * The timezone of the activity
      * @type {string}
@@ -3577,49 +3629,49 @@ export interface SummaryActivityAllOf {
      * @type {LatLng}
      * @memberof SummaryActivityAllOf
      */
-    startLatlng?: LatLng;
+    start_latlng?: LatLng;
     /**
      *
      * @type {LatLng}
      * @memberof SummaryActivityAllOf
      */
-    endLatlng?: LatLng;
+    end_latlng?: LatLng;
     /**
      * The number of achievements gained during this activity
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    achievementCount?: number;
+    achievement_count?: number;
     /**
      * The number of kudos given for this activity
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    kudosCount?: number;
+    kudos_count?: number;
     /**
      * The number of comments for this activity
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    commentCount?: number;
+    comment_count?: number;
     /**
      * The number of athletes for taking part in a group activity
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    athleteCount?: number;
+    athlete_count?: number;
     /**
      * The number of Instagram photos for this activity
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    photoCount?: number;
+    photo_count?: number;
     /**
      * The number of Instagram and Strava photos for this activity
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    totalPhotoCount?: number;
+    total_photo_count?: number;
     /**
      *
      * @type {PolylineMap}
@@ -3661,37 +3713,37 @@ export interface SummaryActivityAllOf {
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    workoutType?: number;
+    workout_type?: number;
     /**
      * The unique identifier of the upload in string format
      * @type {string}
      * @memberof SummaryActivityAllOf
      */
-    uploadIdStr?: string;
+    upload_id_str?: string;
     /**
      * The activity\'s average speed, in meters per second
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    averageSpeed?: number;
+    average_speed?: number;
     /**
      * The activity\'s max speed, in meters per second
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    maxSpeed?: number;
+    max_speed?: number;
     /**
      * Whether the logged-in athlete has kudoed this activity
      * @type {boolean}
      * @memberof SummaryActivityAllOf
      */
-    hasKudoed?: boolean;
+    has_kudoed?: boolean;
     /**
      * The id of the gear for the activity
      * @type {string}
      * @memberof SummaryActivityAllOf
      */
-    gearId?: string;
+    gear_id?: string;
     /**
      * The total work done in kilojoules during this activity. Rides only
      * @type {number}
@@ -3703,26 +3755,27 @@ export interface SummaryActivityAllOf {
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    averageWatts?: number;
+    average_watts?: number;
     /**
      * Whether the watts are from a power meter, false if estimated
      * @type {boolean}
      * @memberof SummaryActivityAllOf
      */
-    deviceWatts?: boolean;
+    device_watts?: boolean;
     /**
      * Rides with power meter data only
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    maxWatts?: number;
+    max_watts?: number;
     /**
      * Similar to Normalized Power. Rides with power meter data only
      * @type {number}
      * @memberof SummaryActivityAllOf
      */
-    weightedAverageWatts?: number;
+    weighted_average_watts?: number;
 }
+
 /**
  *
  * @export
@@ -3740,7 +3793,7 @@ export interface SummaryAthlete {
      * @type {number}
      * @memberof SummaryAthlete
      */
-    resourceState?: number;
+    resource_state?: number;
     /**
      * The athlete\'s first name.
      * @type {string}
@@ -3758,7 +3811,7 @@ export interface SummaryAthlete {
      * @type {string}
      * @memberof SummaryAthlete
      */
-    profileMedium?: string;
+    profile_medium?: string;
     /**
      * URL to a 124x124 pixel profile picture.
      * @type {string}
@@ -3806,19 +3859,19 @@ export interface SummaryAthlete {
      * @type {Date}
      * @memberof SummaryAthlete
      */
-    createdAt?: Date;
+    created_at?: Date;
     /**
      * The time at which the athlete was last updated.
      * @type {Date}
      * @memberof SummaryAthlete
      */
-    updatedAt?: Date;
+    updated_at?: Date;
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum SummaryAthleteSexEnum {
     M = 'M',
     F = 'F'
@@ -3835,7 +3888,7 @@ export interface SummaryAthleteAllOf {
      * @type {number}
      * @memberof SummaryAthleteAllOf
      */
-    resourceState?: number;
+    resource_state?: number;
     /**
      * The athlete\'s first name.
      * @type {string}
@@ -3853,7 +3906,7 @@ export interface SummaryAthleteAllOf {
      * @type {string}
      * @memberof SummaryAthleteAllOf
      */
-    profileMedium?: string;
+    profile_medium?: string;
     /**
      * URL to a 124x124 pixel profile picture.
      * @type {string}
@@ -3901,19 +3954,19 @@ export interface SummaryAthleteAllOf {
      * @type {Date}
      * @memberof SummaryAthleteAllOf
      */
-    createdAt?: Date;
+    created_at?: Date;
     /**
      * The time at which the athlete was last updated.
      * @type {Date}
      * @memberof SummaryAthleteAllOf
      */
-    updatedAt?: Date;
+    updated_at?: Date;
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum SummaryAthleteAllOfSexEnum {
     M = 'M',
     F = 'F'
@@ -3936,7 +3989,7 @@ export interface SummaryClub {
      * @type {number}
      * @memberof SummaryClub
      */
-    resourceState?: number;
+    resource_state?: number;
     /**
      * The club\'s name.
      * @type {string}
@@ -3948,25 +4001,25 @@ export interface SummaryClub {
      * @type {string}
      * @memberof SummaryClub
      */
-    profileMedium?: string;
+    profile_medium?: string;
     /**
      * URL to a ~1185x580 pixel cover photo.
      * @type {string}
      * @memberof SummaryClub
      */
-    coverPhoto?: string;
+    cover_photo?: string;
     /**
      * URL to a ~360x176  pixel cover photo.
      * @type {string}
      * @memberof SummaryClub
      */
-    coverPhotoSmall?: string;
+    cover_photo_small?: string;
     /**
      *
      * @type {string}
      * @memberof SummaryClub
      */
-    sportType?: SummaryClubSportTypeEnum;
+    sport_type?: SummaryClubSportTypeEnum;
     /**
      * The club\'s city.
      * @type {string}
@@ -3996,7 +4049,7 @@ export interface SummaryClub {
      * @type {number}
      * @memberof SummaryClub
      */
-    memberCount?: number;
+    member_count?: number;
     /**
      * Whether the club is featured or not.
      * @type {boolean}
@@ -4018,9 +4071,9 @@ export interface SummaryClub {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum SummaryClubSportTypeEnum {
     Cycling = 'cycling',
     Running = 'running',
@@ -4039,25 +4092,25 @@ export interface SummaryClubAllOf {
      * @type {string}
      * @memberof SummaryClubAllOf
      */
-    profileMedium?: string;
+    profile_medium?: string;
     /**
      * URL to a ~1185x580 pixel cover photo.
      * @type {string}
      * @memberof SummaryClubAllOf
      */
-    coverPhoto?: string;
+    cover_photo?: string;
     /**
      * URL to a ~360x176  pixel cover photo.
      * @type {string}
      * @memberof SummaryClubAllOf
      */
-    coverPhotoSmall?: string;
+    cover_photo_small?: string;
     /**
      *
      * @type {string}
      * @memberof SummaryClubAllOf
      */
-    sportType?: SummaryClubAllOfSportTypeEnum;
+    sport_type?: SummaryClubAllOfSportTypeEnum;
     /**
      * The club\'s city.
      * @type {string}
@@ -4087,7 +4140,7 @@ export interface SummaryClubAllOf {
      * @type {number}
      * @memberof SummaryClubAllOf
      */
-    memberCount?: number;
+    member_count?: number;
     /**
      * Whether the club is featured or not.
      * @type {boolean}
@@ -4109,9 +4162,9 @@ export interface SummaryClubAllOf {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum SummaryClubAllOfSportTypeEnum {
     Cycling = 'cycling',
     Running = 'running',
@@ -4136,7 +4189,7 @@ export interface SummaryGear {
      * @type {number}
      * @memberof SummaryGear
      */
-    resourceState?: number;
+    resource_state?: number;
     /**
      * Whether this gear\'s is the owner\'s default one.
      * @type {boolean}
@@ -4156,6 +4209,7 @@ export interface SummaryGear {
      */
     distance?: number;
 }
+
 /**
  *
  * @export
@@ -4179,7 +4233,7 @@ export interface SummarySegment {
      * @type {string}
      * @memberof SummarySegment
      */
-    activityType?: SummarySegmentActivityTypeEnum;
+    activity_type?: SummarySegmentActivityTypeEnum;
     /**
      * The segment\'s distance, in meters
      * @type {number}
@@ -4191,43 +4245,43 @@ export interface SummarySegment {
      * @type {number}
      * @memberof SummarySegment
      */
-    averageGrade?: number;
+    average_grade?: number;
     /**
      * The segments\'s maximum grade, in percents
      * @type {number}
      * @memberof SummarySegment
      */
-    maximumGrade?: number;
+    maximum_grade?: number;
     /**
      * The segments\'s highest elevation, in meters
      * @type {number}
      * @memberof SummarySegment
      */
-    elevationHigh?: number;
+    elevation_high?: number;
     /**
      * The segments\'s lowest elevation, in meters
      * @type {number}
      * @memberof SummarySegment
      */
-    elevationLow?: number;
+    elevation_low?: number;
     /**
      *
      * @type {LatLng}
      * @memberof SummarySegment
      */
-    startLatlng?: LatLng;
+    start_latlng?: LatLng;
     /**
      *
      * @type {LatLng}
      * @memberof SummarySegment
      */
-    endLatlng?: LatLng;
+    end_latlng?: LatLng;
     /**
      * The category of the climb [0, 5]. Higher is harder ie. 5 is Hors catégorie, 0 is uncategorized in climb_category.
      * @type {number}
      * @memberof SummarySegment
      */
-    climbCategory?: number;
+    climb_category?: number;
     /**
      * The segments\'s city.
      * @type {string}
@@ -4257,13 +4311,13 @@ export interface SummarySegment {
      * @type {SummarySegmentEffort}
      * @memberof SummarySegment
      */
-    athletePrEffort?: SummarySegmentEffort;
+    athlete_pr_effort?: SummarySegmentEffort;
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum SummarySegmentActivityTypeEnum {
     Ride = 'Ride',
     Run = 'Run'
@@ -4286,19 +4340,19 @@ export interface SummarySegmentEffort {
      * @type {number}
      * @memberof SummarySegmentEffort
      */
-    elapsedTime?: number;
+    elapsed_time?: number;
     /**
      * The time at which the effort was started.
      * @type {Date}
      * @memberof SummarySegmentEffort
      */
-    startDate?: Date;
+    start_date?: Date;
     /**
      * The time at which the effort was started in the local timezone.
      * @type {Date}
      * @memberof SummarySegmentEffort
      */
-    startDateLocal?: Date;
+    start_date_local?: Date;
     /**
      * The effort\'s distance in meters
      * @type {number}
@@ -4310,8 +4364,9 @@ export interface SummarySegmentEffort {
      * @type {boolean}
      * @memberof SummarySegmentEffort
      */
-    isKom?: boolean;
+    is_kom?: boolean;
 }
+
 /**
  *
  * @export
@@ -4323,7 +4378,7 @@ export interface TemperatureStream {
      * @type {number}
      * @memberof TemperatureStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -4335,7 +4390,7 @@ export interface TemperatureStream {
      * @type {string}
      * @memberof TemperatureStream
      */
-    seriesType?: TemperatureStreamSeriesTypeEnum;
+    series_type?: TemperatureStreamSeriesTypeEnum;
     /**
      * The sequence of temperature values for this stream, in celsius degrees
      * @type {Array<number>}
@@ -4345,18 +4400,19 @@ export interface TemperatureStream {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum TemperatureStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum TemperatureStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -4375,6 +4431,7 @@ export interface TemperatureStreamAllOf {
      */
     data?: Array<number>;
 }
+
 /**
  *
  * @export
@@ -4386,7 +4443,7 @@ export interface TimeStream {
      * @type {number}
      * @memberof TimeStream
      */
-    originalSize?: number;
+    original_size?: number;
     /**
      * The level of detail (sampling) in which this stream was returned
      * @type {string}
@@ -4398,7 +4455,7 @@ export interface TimeStream {
      * @type {string}
      * @memberof TimeStream
      */
-    seriesType?: TimeStreamSeriesTypeEnum;
+    series_type?: TimeStreamSeriesTypeEnum;
     /**
      * The sequence of time values for this stream, in seconds
      * @type {Array<number>}
@@ -4408,18 +4465,19 @@ export interface TimeStream {
 }
 
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum TimeStreamResolutionEnum {
     Low = 'low',
     Medium = 'medium',
     High = 'high'
 }
+
 /**
-    * @export
-    * @enum {string}
-    */
+ * @export
+ * @enum {string}
+ */
 export enum TimeStreamSeriesTypeEnum {
     Distance = 'distance',
     Time = 'time'
@@ -4438,6 +4496,7 @@ export interface TimeStreamAllOf {
      */
     data?: Array<number>;
 }
+
 /**
  * Stores the exclusive ranges representing zones and the time spent in each.
  * @export
@@ -4445,6 +4504,7 @@ export interface TimeStreamAllOf {
  */
 export interface TimedZoneDistribution extends Array<TimedZoneRange> {
 }
+
 /**
  * A union type representing the time spent in a given zone.
  * @export
@@ -4458,6 +4518,7 @@ export interface TimedZoneRange extends ZoneRange {
      */
     time?: number;
 }
+
 /**
  *
  * @export
@@ -4499,8 +4560,9 @@ export interface UpdatableActivity {
      * @type {string}
      * @memberof UpdatableActivity
      */
-    gearId?: string;
+    gear_id?: string;
 }
+
 /**
  *
  * @export
@@ -4518,13 +4580,13 @@ export interface Upload {
      * @type {string}
      * @memberof Upload
      */
-    idStr?: string;
+    id_str?: string;
     /**
      * The external identifier of the upload
      * @type {string}
      * @memberof Upload
      */
-    externalId?: string;
+    external_id?: string;
     /**
      * The error associated with this upload
      * @type {string}
@@ -4542,8 +4604,9 @@ export interface Upload {
      * @type {number}
      * @memberof Upload
      */
-    activityId?: number;
+    activity_id?: number;
 }
+
 /**
  *
  * @export
@@ -4563,6 +4626,7 @@ export interface ZoneRange {
      */
     max?: number;
 }
+
 /**
  *
  * @export
@@ -4570,6 +4634,7 @@ export interface ZoneRange {
  */
 export interface ZoneRanges extends Array<ZoneRange> {
 }
+
 /**
  *
  * @export
@@ -4581,7 +4646,7 @@ export interface Zones {
      * @type {HeartRateZoneRanges}
      * @memberof Zones
      */
-    heartRate?: HeartRateZoneRanges;
+    heart_rate?: HeartRateZoneRanges;
     /**
      *
      * @type {PowerZoneRanges}
@@ -4599,18 +4664,18 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
         /**
          * Creates a manual activity for an athlete, requires activity:write scope.
          * @summary Create an Activity
-         * @param {InlineObject1} [inlineObject1]
+         * @param {InlineObject1} [inline_object1]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createActivity(inlineObject1?: InlineObject1, options: any = {}): RequestArgs {
+        createActivity(inline_object1?: InlineObject1, options: any = {}): RequestArgs {
             const localVarPath = `/activities`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -4624,15 +4689,14 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
             }
 
 
-
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-            const needsSerialization = (typeof inlineObject1 !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(inlineObject1 !== undefined ? inlineObject1 : {}) : (inlineObject1 || "");
+            const needsSerialization = (typeof inline_object1 !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data = needsSerialization ? JSON.stringify(inline_object1 !== undefined ? inline_object1 : {}) : (inline_object1 || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -4643,14 +4707,14 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
          * Returns the given activity that is owned by the authenticated athlete. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
          * @summary Get Activity
          * @param {number} id The identifier of the activity.
-         * @param {boolean} [includeAllEfforts] To include all segments efforts.
+         * @param {boolean} [include_all_efforts] To include all segments efforts.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getActivityById(id: number, includeAllEfforts?: boolean, options: any = {}): RequestArgs {
+        getActivityById(id: number, include_all_efforts?: boolean, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getActivityById.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getActivityById.');
             }
             const localVarPath = `/activities/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -4659,7 +4723,7 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -4672,10 +4736,9 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
 
-            if (includeAllEfforts !== undefined) {
-                localVarQueryParameter['include_all_efforts'] = includeAllEfforts;
+            if (include_all_efforts !== undefined) {
+                localVarQueryParameter['include_all_efforts'] = include_all_efforts;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4693,14 +4756,14 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
          * @summary List Activity Comments
          * @param {number} id The identifier of the activity.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCommentsByActivityId(id: number, page?: number, perPage?: number, options: any = {}): RequestArgs {
+        getCommentsByActivityId(id: number, page?: number, per_page?: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getCommentsByActivityId.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getCommentsByActivityId.');
             }
             const localVarPath = `/activities/{id}/comments`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -4709,7 +4772,7 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -4726,10 +4789,9 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['page'] = page;
             }
 
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
+            if (per_page !== undefined) {
+                localVarQueryParameter['per_page'] = per_page;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4747,14 +4809,14 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
          * @summary List Activity Kudoers
          * @param {number} id The identifier of the activity.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getKudoersByActivityId(id: number, page?: number, perPage?: number, options: any = {}): RequestArgs {
+        getKudoersByActivityId(id: number, page?: number, per_page?: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getKudoersByActivityId.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getKudoersByActivityId.');
             }
             const localVarPath = `/activities/{id}/kudos`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -4763,7 +4825,7 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -4780,10 +4842,9 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['page'] = page;
             }
 
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
+            if (per_page !== undefined) {
+                localVarQueryParameter['per_page'] = per_page;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4806,7 +4867,7 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
         getLapsByActivityId(id: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getLapsByActivityId.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getLapsByActivityId.');
             }
             const localVarPath = `/activities/{id}/laps`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -4815,7 +4876,7 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -4827,7 +4888,6 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4846,18 +4906,18 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
          * @param {number} [before] An epoch timestamp to use for filtering activities that have taken place before a certain time.
          * @param {number} [after] An epoch timestamp to use for filtering activities that have taken place after a certain time.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLoggedInAthleteActivities(before?: number, after?: number, page?: number, perPage?: number, options: any = {}): RequestArgs {
+        getLoggedInAthleteActivities(before?: number, after?: number, page?: number, per_page?: number, options: any = {}): RequestArgs {
             const localVarPath = `/athlete/activities`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -4882,10 +4942,9 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['page'] = page;
             }
 
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
+            if (per_page !== undefined) {
+                localVarQueryParameter['per_page'] = per_page;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4908,7 +4967,7 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
         getZonesByActivityId(id: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getZonesByActivityId.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getZonesByActivityId.');
             }
             const localVarPath = `/activities/{id}/zones`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -4917,7 +4976,7 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -4929,7 +4988,6 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -4946,14 +5004,14 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
          * Updates the given activity that is owned by the authenticated athlete. Requires activity:write. Also requires activity:read_all in order to update Only Me activities
          * @summary Update Activity
          * @param {number} id The identifier of the activity.
-         * @param {UpdatableActivity} [updatableActivity]
+         * @param {UpdatableActivity} [updatable_activity]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateActivityById(id: number, updatableActivity?: UpdatableActivity, options: any = {}): RequestArgs {
+        updateActivityById(id: number, updatable_activity?: UpdatableActivity, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling updateActivityById.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling updateActivityById.');
             }
             const localVarPath = `/activities/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -4962,7 +5020,7 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'PUT', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -4976,15 +5034,14 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
             }
 
 
-
             localVarHeaderParameter['Content-Type'] = 'application/json';
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
             // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
             delete localVarUrlObj.search;
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...options.headers};
-            const needsSerialization = (typeof updatableActivity !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
-            localVarRequestOptions.data =  needsSerialization ? JSON.stringify(updatableActivity !== undefined ? updatableActivity : {}) : (updatableActivity || "");
+            const needsSerialization = (typeof updatable_activity !== "string") || localVarRequestOptions.headers['Content-Type'] === 'application/json';
+            localVarRequestOptions.data = needsSerialization ? JSON.stringify(updatable_activity !== undefined ? updatable_activity : {}) : (updatable_activity || "");
 
             return {
                 url: globalImportUrl.format(localVarUrlObj),
@@ -4998,17 +5055,17 @@ export const ActivitiesApiAxiosParamCreator = function (configuration?: Configur
  * ActivitiesApi - functional programming interface
  * @export
  */
-export const ActivitiesApiFp = function(configuration?: Configuration) {
+export const ActivitiesApiFp = function (configuration?: Configuration) {
     return {
         /**
          * Creates a manual activity for an athlete, requires activity:write scope.
          * @summary Create an Activity
-         * @param {InlineObject1} [inlineObject1]
+         * @param {InlineObject1} [inline_object1]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createActivity(inlineObject1?: InlineObject1, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DetailedActivity> {
-            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).createActivity(inlineObject1, options);
+        createActivity(inline_object1?: InlineObject1, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DetailedActivity> {
+            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).createActivity(inline_object1, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5018,12 +5075,12 @@ export const ActivitiesApiFp = function(configuration?: Configuration) {
          * Returns the given activity that is owned by the authenticated athlete. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
          * @summary Get Activity
          * @param {number} id The identifier of the activity.
-         * @param {boolean} [includeAllEfforts] To include all segments efforts.
+         * @param {boolean} [include_all_efforts] To include all segments efforts.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getActivityById(id: number, includeAllEfforts?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DetailedActivity> {
-            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).getActivityById(id, includeAllEfforts, options);
+        getActivityById(id: number, include_all_efforts?: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DetailedActivity> {
+            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).getActivityById(id, include_all_efforts, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5034,12 +5091,12 @@ export const ActivitiesApiFp = function(configuration?: Configuration) {
          * @summary List Activity Comments
          * @param {number} id The identifier of the activity.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCommentsByActivityId(id: number, page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Comment>> {
-            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).getCommentsByActivityId(id, page, perPage, options);
+        getCommentsByActivityId(id: number, page?: number, per_page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Comment>> {
+            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).getCommentsByActivityId(id, page, per_page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5050,12 +5107,12 @@ export const ActivitiesApiFp = function(configuration?: Configuration) {
          * @summary List Activity Kudoers
          * @param {number} id The identifier of the activity.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getKudoersByActivityId(id: number, page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryAthlete>> {
-            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).getKudoersByActivityId(id, page, perPage, options);
+        getKudoersByActivityId(id: number, page?: number, per_page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryAthlete>> {
+            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).getKudoersByActivityId(id, page, per_page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5081,12 +5138,12 @@ export const ActivitiesApiFp = function(configuration?: Configuration) {
          * @param {number} [before] An epoch timestamp to use for filtering activities that have taken place before a certain time.
          * @param {number} [after] An epoch timestamp to use for filtering activities that have taken place after a certain time.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLoggedInAthleteActivities(before?: number, after?: number, page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryActivity>> {
-            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).getLoggedInAthleteActivities(before, after, page, perPage, options);
+        getLoggedInAthleteActivities(before?: number, after?: number, page?: number, per_page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryActivity>> {
+            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).getLoggedInAthleteActivities(before, after, page, per_page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5110,12 +5167,12 @@ export const ActivitiesApiFp = function(configuration?: Configuration) {
          * Updates the given activity that is owned by the authenticated athlete. Requires activity:write. Also requires activity:read_all in order to update Only Me activities
          * @summary Update Activity
          * @param {number} id The identifier of the activity.
-         * @param {UpdatableActivity} [updatableActivity]
+         * @param {UpdatableActivity} [updatable_activity]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateActivityById(id: number, updatableActivity?: UpdatableActivity, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DetailedActivity> {
-            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).updateActivityById(id, updatableActivity, options);
+        updateActivityById(id: number, updatable_activity?: UpdatableActivity, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<DetailedActivity> {
+            const localVarAxiosArgs = ActivitiesApiAxiosParamCreator(configuration).updateActivityById(id, updatable_activity, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5133,47 +5190,47 @@ export const ActivitiesApiFactory = function (configuration?: Configuration, bas
         /**
          * Creates a manual activity for an athlete, requires activity:write scope.
          * @summary Create an Activity
-         * @param {InlineObject1} [inlineObject1]
+         * @param {InlineObject1} [inline_object1]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createActivity(inlineObject1?: InlineObject1, options?: any): AxiosPromise<DetailedActivity> {
-            return ActivitiesApiFp(configuration).createActivity(inlineObject1, options)(axios, basePath);
+        createActivity(inline_object1?: InlineObject1, options?: any): AxiosPromise<DetailedActivity> {
+            return ActivitiesApiFp(configuration).createActivity(inline_object1, options)(axios, basePath);
         },
         /**
          * Returns the given activity that is owned by the authenticated athlete. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
          * @summary Get Activity
          * @param {number} id The identifier of the activity.
-         * @param {boolean} [includeAllEfforts] To include all segments efforts.
+         * @param {boolean} [include_all_efforts] To include all segments efforts.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getActivityById(id: number, includeAllEfforts?: boolean, options?: any): AxiosPromise<DetailedActivity> {
-            return ActivitiesApiFp(configuration).getActivityById(id, includeAllEfforts, options)(axios, basePath);
+        getActivityById(id: number, include_all_efforts?: boolean, options?: any): AxiosPromise<DetailedActivity> {
+            return ActivitiesApiFp(configuration).getActivityById(id, include_all_efforts, options)(axios, basePath);
         },
         /**
          * Returns the comments on the given activity. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
          * @summary List Activity Comments
          * @param {number} id The identifier of the activity.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getCommentsByActivityId(id: number, page?: number, perPage?: number, options?: any): AxiosPromise<Array<Comment>> {
-            return ActivitiesApiFp(configuration).getCommentsByActivityId(id, page, perPage, options)(axios, basePath);
+        getCommentsByActivityId(id: number, page?: number, per_page?: number, options?: any): AxiosPromise<Array<Comment>> {
+            return ActivitiesApiFp(configuration).getCommentsByActivityId(id, page, per_page, options)(axios, basePath);
         },
         /**
          * Returns the athletes who kudoed an activity identified by an identifier. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
          * @summary List Activity Kudoers
          * @param {number} id The identifier of the activity.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getKudoersByActivityId(id: number, page?: number, perPage?: number, options?: any): AxiosPromise<Array<SummaryAthlete>> {
-            return ActivitiesApiFp(configuration).getKudoersByActivityId(id, page, perPage, options)(axios, basePath);
+        getKudoersByActivityId(id: number, page?: number, per_page?: number, options?: any): AxiosPromise<Array<SummaryAthlete>> {
+            return ActivitiesApiFp(configuration).getKudoersByActivityId(id, page, per_page, options)(axios, basePath);
         },
         /**
          * Returns the laps of an activity identified by an identifier. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
@@ -5191,12 +5248,12 @@ export const ActivitiesApiFactory = function (configuration?: Configuration, bas
          * @param {number} [before] An epoch timestamp to use for filtering activities that have taken place before a certain time.
          * @param {number} [after] An epoch timestamp to use for filtering activities that have taken place after a certain time.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLoggedInAthleteActivities(before?: number, after?: number, page?: number, perPage?: number, options?: any): AxiosPromise<Array<SummaryActivity>> {
-            return ActivitiesApiFp(configuration).getLoggedInAthleteActivities(before, after, page, perPage, options)(axios, basePath);
+        getLoggedInAthleteActivities(before?: number, after?: number, page?: number, per_page?: number, options?: any): AxiosPromise<Array<SummaryActivity>> {
+            return ActivitiesApiFp(configuration).getLoggedInAthleteActivities(before, after, page, per_page, options)(axios, basePath);
         },
         /**
          * Summit Feature. Returns the zones of a given activity. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
@@ -5212,12 +5269,12 @@ export const ActivitiesApiFactory = function (configuration?: Configuration, bas
          * Updates the given activity that is owned by the authenticated athlete. Requires activity:write. Also requires activity:read_all in order to update Only Me activities
          * @summary Update Activity
          * @param {number} id The identifier of the activity.
-         * @param {UpdatableActivity} [updatableActivity]
+         * @param {UpdatableActivity} [updatable_activity]
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateActivityById(id: number, updatableActivity?: UpdatableActivity, options?: any): AxiosPromise<DetailedActivity> {
-            return ActivitiesApiFp(configuration).updateActivityById(id, updatableActivity, options)(axios, basePath);
+        updateActivityById(id: number, updatable_activity?: UpdatableActivity, options?: any): AxiosPromise<DetailedActivity> {
+            return ActivitiesApiFp(configuration).updateActivityById(id, updatable_activity, options)(axios, basePath);
         },
     };
 };
@@ -5232,26 +5289,26 @@ export class ActivitiesApi extends StravaApi {
     /**
      * Creates a manual activity for an athlete, requires activity:write scope.
      * @summary Create an Activity
-     * @param {InlineObject1} [inlineObject1]
+     * @param {InlineObject1} [inline_object1]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActivitiesApi
      */
-    public createActivity(inlineObject1?: InlineObject1, options?: any) {
-        return ActivitiesApiFp(this.configuration).createActivity(inlineObject1, options)(this.axios, this.basePath);
+    public createActivity(inline_object1?: InlineObject1, options?: any) {
+        return ActivitiesApiFp(this.configuration).createActivity(inline_object1, options)(this.axios, this.basePath);
     }
 
     /**
      * Returns the given activity that is owned by the authenticated athlete. Requires activity:read for Everyone and Followers activities. Requires activity:read_all for Only Me activities.
      * @summary Get Activity
      * @param {number} id The identifier of the activity.
-     * @param {boolean} [includeAllEfforts] To include all segments efforts.
+     * @param {boolean} [include_all_efforts] To include all segments efforts.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActivitiesApi
      */
-    public getActivityById(id: number, includeAllEfforts?: boolean, options?: any) {
-        return ActivitiesApiFp(this.configuration).getActivityById(id, includeAllEfforts, options)(this.axios, this.basePath);
+    public getActivityById(id: number, include_all_efforts?: boolean, options?: any) {
+        return ActivitiesApiFp(this.configuration).getActivityById(id, include_all_efforts, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5259,13 +5316,13 @@ export class ActivitiesApi extends StravaApi {
      * @summary List Activity Comments
      * @param {number} id The identifier of the activity.
      * @param {number} [page] Page number.
-     * @param {number} [perPage] Number of items per page. Defaults to 30.
+     * @param {number} [per_page] Number of items per page. Defaults to 30.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActivitiesApi
      */
-    public getCommentsByActivityId(id: number, page?: number, perPage?: number, options?: any) {
-        return ActivitiesApiFp(this.configuration).getCommentsByActivityId(id, page, perPage, options)(this.axios, this.basePath);
+    public getCommentsByActivityId(id: number, page?: number, per_page?: number, options?: any) {
+        return ActivitiesApiFp(this.configuration).getCommentsByActivityId(id, page, per_page, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5273,13 +5330,13 @@ export class ActivitiesApi extends StravaApi {
      * @summary List Activity Kudoers
      * @param {number} id The identifier of the activity.
      * @param {number} [page] Page number.
-     * @param {number} [perPage] Number of items per page. Defaults to 30.
+     * @param {number} [per_page] Number of items per page. Defaults to 30.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActivitiesApi
      */
-    public getKudoersByActivityId(id: number, page?: number, perPage?: number, options?: any) {
-        return ActivitiesApiFp(this.configuration).getKudoersByActivityId(id, page, perPage, options)(this.axios, this.basePath);
+    public getKudoersByActivityId(id: number, page?: number, per_page?: number, options?: any) {
+        return ActivitiesApiFp(this.configuration).getKudoersByActivityId(id, page, per_page, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5300,13 +5357,13 @@ export class ActivitiesApi extends StravaApi {
      * @param {number} [before] An epoch timestamp to use for filtering activities that have taken place before a certain time.
      * @param {number} [after] An epoch timestamp to use for filtering activities that have taken place after a certain time.
      * @param {number} [page] Page number.
-     * @param {number} [perPage] Number of items per page. Defaults to 30.
+     * @param {number} [per_page] Number of items per page. Defaults to 30.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActivitiesApi
      */
-    public getLoggedInAthleteActivities(before?: number, after?: number, page?: number, perPage?: number, options?: any) {
-        return ActivitiesApiFp(this.configuration).getLoggedInAthleteActivities(before, after, page, perPage, options)(this.axios, this.basePath);
+    public getLoggedInAthleteActivities(before?: number, after?: number, page?: number, per_page?: number, options?: any) {
+        return ActivitiesApiFp(this.configuration).getLoggedInAthleteActivities(before, after, page, per_page, options)(this.axios, this.basePath);
     }
 
     /**
@@ -5325,13 +5382,13 @@ export class ActivitiesApi extends StravaApi {
      * Updates the given activity that is owned by the authenticated athlete. Requires activity:write. Also requires activity:read_all in order to update Only Me activities
      * @summary Update Activity
      * @param {number} id The identifier of the activity.
-     * @param {UpdatableActivity} [updatableActivity]
+     * @param {UpdatableActivity} [updatable_activity]
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ActivitiesApi
      */
-    public updateActivityById(id: number, updatableActivity?: UpdatableActivity, options?: any) {
-        return ActivitiesApiFp(this.configuration).updateActivityById(id, updatableActivity, options)(this.axios, this.basePath);
+    public updateActivityById(id: number, updatable_activity?: UpdatableActivity, options?: any) {
+        return ActivitiesApiFp(this.configuration).updateActivityById(id, updatable_activity, options)(this.axios, this.basePath);
     }
 
 }
@@ -5356,7 +5413,7 @@ export const AthletesApiAxiosParamCreator = function (configuration?: Configurat
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -5368,7 +5425,6 @@ export const AthletesApiAxiosParamCreator = function (configuration?: Configurat
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5394,7 +5450,7 @@ export const AthletesApiAxiosParamCreator = function (configuration?: Configurat
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -5406,7 +5462,6 @@ export const AthletesApiAxiosParamCreator = function (configuration?: Configurat
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5429,7 +5484,7 @@ export const AthletesApiAxiosParamCreator = function (configuration?: Configurat
         getStats(id: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getStats.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getStats.');
             }
             const localVarPath = `/athletes/{id}/stats`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -5438,7 +5493,7 @@ export const AthletesApiAxiosParamCreator = function (configuration?: Configurat
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -5450,7 +5505,6 @@ export const AthletesApiAxiosParamCreator = function (configuration?: Configurat
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5473,7 +5527,7 @@ export const AthletesApiAxiosParamCreator = function (configuration?: Configurat
         updateLoggedInAthlete(weight: number, options: any = {}): RequestArgs {
             // verify required parameter 'weight' is not null or undefined
             if (weight === null || weight === undefined) {
-                throw new RequiredError('weight','Required parameter weight was null or undefined when calling updateLoggedInAthlete.');
+                throw new RequiredError('weight', 'Required parameter weight was null or undefined when calling updateLoggedInAthlete.');
             }
             const localVarPath = `/athlete`
                 .replace(`{${"weight"}}`, encodeURIComponent(String(weight)));
@@ -5482,7 +5536,7 @@ export const AthletesApiAxiosParamCreator = function (configuration?: Configurat
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'PUT', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -5494,7 +5548,6 @@ export const AthletesApiAxiosParamCreator = function (configuration?: Configurat
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5514,7 +5567,7 @@ export const AthletesApiAxiosParamCreator = function (configuration?: Configurat
  * AthletesApi - functional programming interface
  * @export
  */
-export const AthletesApiFp = function(configuration?: Configuration) {
+export const AthletesApiFp = function (configuration?: Configuration) {
     return {
         /**
          * Returns the currently authenticated athlete. Tokens with profile:read_all scope will receive a detailed athlete representation; all others will receive a summary representation.
@@ -5687,14 +5740,14 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
          * @summary List Club Activities
          * @param {number} id The identifier of the club.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getClubActivitiesById(id: number, page?: number, perPage?: number, options: any = {}): RequestArgs {
+        getClubActivitiesById(id: number, page?: number, per_page?: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getClubActivitiesById.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getClubActivitiesById.');
             }
             const localVarPath = `/clubs/{id}/activities`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -5703,7 +5756,7 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -5720,10 +5773,9 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['page'] = page;
             }
 
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
+            if (per_page !== undefined) {
+                localVarQueryParameter['per_page'] = per_page;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5741,14 +5793,14 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
          * @summary List Club Administrators
          * @param {number} id The identifier of the club.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getClubAdminsById(id: number, page?: number, perPage?: number, options: any = {}): RequestArgs {
+        getClubAdminsById(id: number, page?: number, per_page?: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getClubAdminsById.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getClubAdminsById.');
             }
             const localVarPath = `/clubs/{id}/admins`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -5757,7 +5809,7 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -5774,10 +5826,9 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['page'] = page;
             }
 
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
+            if (per_page !== undefined) {
+                localVarQueryParameter['per_page'] = per_page;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5800,7 +5851,7 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
         getClubById(id: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getClubById.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getClubById.');
             }
             const localVarPath = `/clubs/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -5809,7 +5860,7 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -5821,7 +5872,6 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5839,14 +5889,14 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
          * @summary List Club Members
          * @param {number} id The identifier of the club.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getClubMembersById(id: number, page?: number, perPage?: number, options: any = {}): RequestArgs {
+        getClubMembersById(id: number, page?: number, per_page?: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getClubMembersById.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getClubMembersById.');
             }
             const localVarPath = `/clubs/{id}/members`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -5855,7 +5905,7 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -5872,10 +5922,9 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['page'] = page;
             }
 
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
+            if (per_page !== undefined) {
+                localVarQueryParameter['per_page'] = per_page;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5892,18 +5941,18 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
          * Returns a list of the clubs whose membership includes the authenticated athlete.
          * @summary List Athlete Clubs
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLoggedInAthleteClubs(page?: number, perPage?: number, options: any = {}): RequestArgs {
+        getLoggedInAthleteClubs(page?: number, per_page?: number, options: any = {}): RequestArgs {
             const localVarPath = `/athlete/clubs`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -5920,10 +5969,9 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
                 localVarQueryParameter['page'] = page;
             }
 
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
+            if (per_page !== undefined) {
+                localVarQueryParameter['per_page'] = per_page;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -5943,19 +5991,19 @@ export const ClubsApiAxiosParamCreator = function (configuration?: Configuration
  * ClubsApi - functional programming interface
  * @export
  */
-export const ClubsApiFp = function(configuration?: Configuration) {
+export const ClubsApiFp = function (configuration?: Configuration) {
     return {
         /**
          * Retrieve recent activities from members of a specific club. The authenticated athlete must belong to the requested club in order to hit this endpoint. Pagination is supported. Athlete profile visibility is respected for all activities.
          * @summary List Club Activities
          * @param {number} id The identifier of the club.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getClubActivitiesById(id: number, page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryActivity>> {
-            const localVarAxiosArgs = ClubsApiAxiosParamCreator(configuration).getClubActivitiesById(id, page, perPage, options);
+        getClubActivitiesById(id: number, page?: number, per_page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryActivity>> {
+            const localVarAxiosArgs = ClubsApiAxiosParamCreator(configuration).getClubActivitiesById(id, page, per_page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5966,12 +6014,12 @@ export const ClubsApiFp = function(configuration?: Configuration) {
          * @summary List Club Administrators
          * @param {number} id The identifier of the club.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getClubAdminsById(id: number, page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryAthlete>> {
-            const localVarAxiosArgs = ClubsApiAxiosParamCreator(configuration).getClubAdminsById(id, page, perPage, options);
+        getClubAdminsById(id: number, page?: number, per_page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryAthlete>> {
+            const localVarAxiosArgs = ClubsApiAxiosParamCreator(configuration).getClubAdminsById(id, page, per_page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -5996,12 +6044,12 @@ export const ClubsApiFp = function(configuration?: Configuration) {
          * @summary List Club Members
          * @param {number} id The identifier of the club.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getClubMembersById(id: number, page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryAthlete>> {
-            const localVarAxiosArgs = ClubsApiAxiosParamCreator(configuration).getClubMembersById(id, page, perPage, options);
+        getClubMembersById(id: number, page?: number, per_page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryAthlete>> {
+            const localVarAxiosArgs = ClubsApiAxiosParamCreator(configuration).getClubMembersById(id, page, per_page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6011,12 +6059,12 @@ export const ClubsApiFp = function(configuration?: Configuration) {
          * Returns a list of the clubs whose membership includes the authenticated athlete.
          * @summary List Athlete Clubs
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLoggedInAthleteClubs(page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryClub>> {
-            const localVarAxiosArgs = ClubsApiAxiosParamCreator(configuration).getLoggedInAthleteClubs(page, perPage, options);
+        getLoggedInAthleteClubs(page?: number, per_page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummaryClub>> {
+            const localVarAxiosArgs = ClubsApiAxiosParamCreator(configuration).getLoggedInAthleteClubs(page, per_page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6036,24 +6084,24 @@ export const ClubsApiFactory = function (configuration?: Configuration, basePath
          * @summary List Club Activities
          * @param {number} id The identifier of the club.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getClubActivitiesById(id: number, page?: number, perPage?: number, options?: any): AxiosPromise<Array<SummaryActivity>> {
-            return ClubsApiFp(configuration).getClubActivitiesById(id, page, perPage, options)(axios, basePath);
+        getClubActivitiesById(id: number, page?: number, per_page?: number, options?: any): AxiosPromise<Array<SummaryActivity>> {
+            return ClubsApiFp(configuration).getClubActivitiesById(id, page, per_page, options)(axios, basePath);
         },
         /**
          * Returns a list of the administrators of a given club.
          * @summary List Club Administrators
          * @param {number} id The identifier of the club.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getClubAdminsById(id: number, page?: number, perPage?: number, options?: any): AxiosPromise<Array<SummaryAthlete>> {
-            return ClubsApiFp(configuration).getClubAdminsById(id, page, perPage, options)(axios, basePath);
+        getClubAdminsById(id: number, page?: number, per_page?: number, options?: any): AxiosPromise<Array<SummaryAthlete>> {
+            return ClubsApiFp(configuration).getClubAdminsById(id, page, per_page, options)(axios, basePath);
         },
         /**
          * Returns a given club using its identifier.
@@ -6070,23 +6118,23 @@ export const ClubsApiFactory = function (configuration?: Configuration, basePath
          * @summary List Club Members
          * @param {number} id The identifier of the club.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getClubMembersById(id: number, page?: number, perPage?: number, options?: any): AxiosPromise<Array<SummaryAthlete>> {
-            return ClubsApiFp(configuration).getClubMembersById(id, page, perPage, options)(axios, basePath);
+        getClubMembersById(id: number, page?: number, per_page?: number, options?: any): AxiosPromise<Array<SummaryAthlete>> {
+            return ClubsApiFp(configuration).getClubMembersById(id, page, per_page, options)(axios, basePath);
         },
         /**
          * Returns a list of the clubs whose membership includes the authenticated athlete.
          * @summary List Athlete Clubs
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLoggedInAthleteClubs(page?: number, perPage?: number, options?: any): AxiosPromise<Array<SummaryClub>> {
-            return ClubsApiFp(configuration).getLoggedInAthleteClubs(page, perPage, options)(axios, basePath);
+        getLoggedInAthleteClubs(page?: number, per_page?: number, options?: any): AxiosPromise<Array<SummaryClub>> {
+            return ClubsApiFp(configuration).getLoggedInAthleteClubs(page, per_page, options)(axios, basePath);
         },
     };
 };
@@ -6103,13 +6151,13 @@ export class ClubsApi extends StravaApi {
      * @summary List Club Activities
      * @param {number} id The identifier of the club.
      * @param {number} [page] Page number.
-     * @param {number} [perPage] Number of items per page. Defaults to 30.
+     * @param {number} [per_page] Number of items per page. Defaults to 30.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ClubsApi
      */
-    public getClubActivitiesById(id: number, page?: number, perPage?: number, options?: any) {
-        return ClubsApiFp(this.configuration).getClubActivitiesById(id, page, perPage, options)(this.axios, this.basePath);
+    public getClubActivitiesById(id: number, page?: number, per_page?: number, options?: any) {
+        return ClubsApiFp(this.configuration).getClubActivitiesById(id, page, per_page, options)(this.axios, this.basePath);
     }
 
     /**
@@ -6117,13 +6165,13 @@ export class ClubsApi extends StravaApi {
      * @summary List Club Administrators
      * @param {number} id The identifier of the club.
      * @param {number} [page] Page number.
-     * @param {number} [perPage] Number of items per page. Defaults to 30.
+     * @param {number} [per_page] Number of items per page. Defaults to 30.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ClubsApi
      */
-    public getClubAdminsById(id: number, page?: number, perPage?: number, options?: any) {
-        return ClubsApiFp(this.configuration).getClubAdminsById(id, page, perPage, options)(this.axios, this.basePath);
+    public getClubAdminsById(id: number, page?: number, per_page?: number, options?: any) {
+        return ClubsApiFp(this.configuration).getClubAdminsById(id, page, per_page, options)(this.axios, this.basePath);
     }
 
     /**
@@ -6143,26 +6191,26 @@ export class ClubsApi extends StravaApi {
      * @summary List Club Members
      * @param {number} id The identifier of the club.
      * @param {number} [page] Page number.
-     * @param {number} [perPage] Number of items per page. Defaults to 30.
+     * @param {number} [per_page] Number of items per page. Defaults to 30.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ClubsApi
      */
-    public getClubMembersById(id: number, page?: number, perPage?: number, options?: any) {
-        return ClubsApiFp(this.configuration).getClubMembersById(id, page, perPage, options)(this.axios, this.basePath);
+    public getClubMembersById(id: number, page?: number, per_page?: number, options?: any) {
+        return ClubsApiFp(this.configuration).getClubMembersById(id, page, per_page, options)(this.axios, this.basePath);
     }
 
     /**
      * Returns a list of the clubs whose membership includes the authenticated athlete.
      * @summary List Athlete Clubs
      * @param {number} [page] Page number.
-     * @param {number} [perPage] Number of items per page. Defaults to 30.
+     * @param {number} [per_page] Number of items per page. Defaults to 30.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof ClubsApi
      */
-    public getLoggedInAthleteClubs(page?: number, perPage?: number, options?: any) {
-        return ClubsApiFp(this.configuration).getLoggedInAthleteClubs(page, perPage, options)(this.axios, this.basePath);
+    public getLoggedInAthleteClubs(page?: number, per_page?: number, options?: any) {
+        return ClubsApiFp(this.configuration).getLoggedInAthleteClubs(page, per_page, options)(this.axios, this.basePath);
     }
 
 }
@@ -6184,7 +6232,7 @@ export const GearsApiAxiosParamCreator = function (configuration?: Configuration
         getGearById(id: string, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getGearById.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getGearById.');
             }
             const localVarPath = `/gear/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -6193,7 +6241,7 @@ export const GearsApiAxiosParamCreator = function (configuration?: Configuration
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6205,7 +6253,6 @@ export const GearsApiAxiosParamCreator = function (configuration?: Configuration
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6225,7 +6272,7 @@ export const GearsApiAxiosParamCreator = function (configuration?: Configuration
  * GearsApi - functional programming interface
  * @export
  */
-export const GearsApiFp = function(configuration?: Configuration) {
+export const GearsApiFp = function (configuration?: Configuration) {
     return {
         /**
          * Returns an equipment using its identifier.
@@ -6301,7 +6348,7 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
         getRouteAsGPX(id: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getRouteAsGPX.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getRouteAsGPX.');
             }
             const localVarPath = `/routes/{id}/export_gpx`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -6310,7 +6357,7 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6322,7 +6369,6 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6345,7 +6391,7 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
         getRouteAsTCX(id: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getRouteAsTCX.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getRouteAsTCX.');
             }
             const localVarPath = `/routes/{id}/export_tcx`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -6354,7 +6400,7 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6366,7 +6412,6 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6389,7 +6434,7 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
         getRouteById(id: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getRouteById.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getRouteById.');
             }
             const localVarPath = `/routes/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -6398,7 +6443,7 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6410,7 +6455,6 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6428,14 +6472,14 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
          * @summary List Athlete Routes
          * @param {number} id The identifier of the athlete.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRoutesByAthleteId(id: number, page?: number, perPage?: number, options: any = {}): RequestArgs {
+        getRoutesByAthleteId(id: number, page?: number, per_page?: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getRoutesByAthleteId.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getRoutesByAthleteId.');
             }
             const localVarPath = `/athletes/{id}/routes`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -6444,7 +6488,7 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6461,10 +6505,9 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
                 localVarQueryParameter['page'] = page;
             }
 
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
+            if (per_page !== undefined) {
+                localVarQueryParameter['per_page'] = per_page;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6484,7 +6527,7 @@ export const RoutesApiAxiosParamCreator = function (configuration?: Configuratio
  * RoutesApi - functional programming interface
  * @export
  */
-export const RoutesApiFp = function(configuration?: Configuration) {
+export const RoutesApiFp = function (configuration?: Configuration) {
     return {
         /**
          * Returns a GPX file of the route. Requires read_all scope for private routes.
@@ -6533,12 +6576,12 @@ export const RoutesApiFp = function(configuration?: Configuration) {
          * @summary List Athlete Routes
          * @param {number} id The identifier of the athlete.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRoutesByAthleteId(id: number, page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Route>> {
-            const localVarAxiosArgs = RoutesApiAxiosParamCreator(configuration).getRoutesByAthleteId(id, page, perPage, options);
+        getRoutesByAthleteId(id: number, page?: number, per_page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<Route>> {
+            const localVarAxiosArgs = RoutesApiAxiosParamCreator(configuration).getRoutesByAthleteId(id, page, per_page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -6588,12 +6631,12 @@ export const RoutesApiFactory = function (configuration?: Configuration, basePat
          * @summary List Athlete Routes
          * @param {number} id The identifier of the athlete.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getRoutesByAthleteId(id: number, page?: number, perPage?: number, options?: any): AxiosPromise<Array<Route>> {
-            return RoutesApiFp(configuration).getRoutesByAthleteId(id, page, perPage, options)(axios, basePath);
+        getRoutesByAthleteId(id: number, page?: number, per_page?: number, options?: any): AxiosPromise<Array<Route>> {
+            return RoutesApiFp(configuration).getRoutesByAthleteId(id, page, per_page, options)(axios, basePath);
         },
     };
 };
@@ -6646,13 +6689,13 @@ export class RoutesApi extends StravaApi {
      * @summary List Athlete Routes
      * @param {number} id The identifier of the athlete.
      * @param {number} [page] Page number.
-     * @param {number} [perPage] Number of items per page. Defaults to 30.
+     * @param {number} [per_page] Number of items per page. Defaults to 30.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof RoutesApi
      */
-    public getRoutesByAthleteId(id: number, page?: number, perPage?: number, options?: any) {
-        return RoutesApiFp(this.configuration).getRoutesByAthleteId(id, page, perPage, options)(this.axios, this.basePath);
+    public getRoutesByAthleteId(id: number, page?: number, per_page?: number, options?: any) {
+        return RoutesApiFp(this.configuration).getRoutesByAthleteId(id, page, per_page, options)(this.axios, this.basePath);
     }
 
 }
@@ -6674,7 +6717,7 @@ export const RunningRacesApiAxiosParamCreator = function (configuration?: Config
         getRunningRaceById(id: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getRunningRaceById.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getRunningRaceById.');
             }
             const localVarPath = `/running_races/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -6683,7 +6726,7 @@ export const RunningRacesApiAxiosParamCreator = function (configuration?: Config
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6695,7 +6738,6 @@ export const RunningRacesApiAxiosParamCreator = function (configuration?: Config
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6722,7 +6764,7 @@ export const RunningRacesApiAxiosParamCreator = function (configuration?: Config
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6738,7 +6780,6 @@ export const RunningRacesApiAxiosParamCreator = function (configuration?: Config
             if (year !== undefined) {
                 localVarQueryParameter['year'] = year;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6758,7 +6799,7 @@ export const RunningRacesApiAxiosParamCreator = function (configuration?: Config
  * RunningRacesApi - functional programming interface
  * @export
  */
-export const RunningRacesApiFp = function(configuration?: Configuration) {
+export const RunningRacesApiFp = function (configuration?: Configuration) {
     return {
         /**
          * Returns a running race for a given identifier.
@@ -6865,14 +6906,14 @@ export const SegmentEffortsApiAxiosParamCreator = function (configuration?: Conf
          * @summary List Segment Efforts
          * @param {number} id The identifier of the segment.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getEffortsBySegmentId(id: number, page?: number, perPage?: number, options: any = {}): RequestArgs {
+        getEffortsBySegmentId(id: number, page?: number, per_page?: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getEffortsBySegmentId.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getEffortsBySegmentId.');
             }
             const localVarPath = `/segments/{id}/all_efforts`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -6881,7 +6922,7 @@ export const SegmentEffortsApiAxiosParamCreator = function (configuration?: Conf
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6898,10 +6939,9 @@ export const SegmentEffortsApiAxiosParamCreator = function (configuration?: Conf
                 localVarQueryParameter['page'] = page;
             }
 
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
+            if (per_page !== undefined) {
+                localVarQueryParameter['per_page'] = per_page;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6924,7 +6964,7 @@ export const SegmentEffortsApiAxiosParamCreator = function (configuration?: Conf
         getSegmentEffortById(id: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getSegmentEffortById.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getSegmentEffortById.');
             }
             const localVarPath = `/segment_efforts/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -6933,7 +6973,7 @@ export const SegmentEffortsApiAxiosParamCreator = function (configuration?: Conf
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -6945,7 +6985,6 @@ export const SegmentEffortsApiAxiosParamCreator = function (configuration?: Conf
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -6965,19 +7004,19 @@ export const SegmentEffortsApiAxiosParamCreator = function (configuration?: Conf
  * SegmentEffortsApi - functional programming interface
  * @export
  */
-export const SegmentEffortsApiFp = function(configuration?: Configuration) {
+export const SegmentEffortsApiFp = function (configuration?: Configuration) {
     return {
         /**
          * Returns a set of the authenticated athlete\'s segment efforts for a given segment.
          * @summary List Segment Efforts
          * @param {number} id The identifier of the segment.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getEffortsBySegmentId(id: number, page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<DetailedSegmentEffort>> {
-            const localVarAxiosArgs = SegmentEffortsApiAxiosParamCreator(configuration).getEffortsBySegmentId(id, page, perPage, options);
+        getEffortsBySegmentId(id: number, page?: number, per_page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<DetailedSegmentEffort>> {
+            const localVarAxiosArgs = SegmentEffortsApiAxiosParamCreator(configuration).getEffortsBySegmentId(id, page, per_page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7011,12 +7050,12 @@ export const SegmentEffortsApiFactory = function (configuration?: Configuration,
          * @summary List Segment Efforts
          * @param {number} id The identifier of the segment.
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getEffortsBySegmentId(id: number, page?: number, perPage?: number, options?: any): AxiosPromise<Array<DetailedSegmentEffort>> {
-            return SegmentEffortsApiFp(configuration).getEffortsBySegmentId(id, page, perPage, options)(axios, basePath);
+        getEffortsBySegmentId(id: number, page?: number, per_page?: number, options?: any): AxiosPromise<Array<DetailedSegmentEffort>> {
+            return SegmentEffortsApiFp(configuration).getEffortsBySegmentId(id, page, per_page, options)(axios, basePath);
         },
         /**
          * Returns a segment effort from an activity that is owned by the authenticated athlete.
@@ -7043,13 +7082,13 @@ export class SegmentEffortsApi extends StravaApi {
      * @summary List Segment Efforts
      * @param {number} id The identifier of the segment.
      * @param {number} [page] Page number.
-     * @param {number} [perPage] Number of items per page. Defaults to 30.
+     * @param {number} [per_page] Number of items per page. Defaults to 30.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SegmentEffortsApi
      */
-    public getEffortsBySegmentId(id: number, page?: number, perPage?: number, options?: any) {
-        return SegmentEffortsApiFp(this.configuration).getEffortsBySegmentId(id, page, perPage, options)(this.axios, this.basePath);
+    public getEffortsBySegmentId(id: number, page?: number, per_page?: number, options?: any) {
+        return SegmentEffortsApiFp(this.configuration).getEffortsBySegmentId(id, page, per_page, options)(this.axios, this.basePath);
     }
 
     /**
@@ -7077,16 +7116,16 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
          * Returns the top 10 segments matching a specified query.
          * @summary Explore segments
          * @param {Array<number>} bounds The latitude and longitude for two points describing a rectangular boundary for the search: [southwest corner latitutde, southwest corner longitude, northeast corner latitude, northeast corner longitude]
-         * @param {'running' | 'riding'} [activityType] Desired activity type.
-         * @param {number} [minCat] The minimum climbing category.
-         * @param {number} [maxCat] The maximum climbing category.
+         * @param {'running' | 'riding'} [activity_type] Desired activity type.
+         * @param {number} [min_cat] The minimum climbing category.
+         * @param {number} [max_cat] The maximum climbing category.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exploreSegments(bounds: Array<number>, activityType?: 'running' | 'riding', minCat?: number, maxCat?: number, options: any = {}): RequestArgs {
+        exploreSegments(bounds: Array<number>, activity_type?: 'running' | 'riding', min_cat?: number, max_cat?: number, options: any = {}): RequestArgs {
             // verify required parameter 'bounds' is not null or undefined
             if (bounds === null || bounds === undefined) {
-                throw new RequiredError('bounds','Required parameter bounds was null or undefined when calling exploreSegments.');
+                throw new RequiredError('bounds', 'Required parameter bounds was null or undefined when calling exploreSegments.');
             }
             const localVarPath = `/segments/explore`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
@@ -7094,7 +7133,7 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -7111,18 +7150,17 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['bounds'] = bounds.join(COLLECTION_FORMATS.csv);
             }
 
-            if (activityType !== undefined) {
-                localVarQueryParameter['activity_type'] = activityType;
+            if (activity_type !== undefined) {
+                localVarQueryParameter['activity_type'] = activity_type;
             }
 
-            if (minCat !== undefined) {
-                localVarQueryParameter['min_cat'] = minCat;
+            if (min_cat !== undefined) {
+                localVarQueryParameter['min_cat'] = min_cat;
             }
 
-            if (maxCat !== undefined) {
-                localVarQueryParameter['max_cat'] = maxCat;
+            if (max_cat !== undefined) {
+                localVarQueryParameter['max_cat'] = max_cat;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -7140,21 +7178,21 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
          * @summary Get Segment Leaderboard
          * @param {number} id The identifier of the segment leaderboard.
          * @param {'M' | 'F'} [gender] Filter by gender.
-         * @param {'19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus'} [ageGroup] Summit Feature. Filter by age group.
-         * @param {'0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus'} [weightClass] Summit Feature. Filter by weight class.
+         * @param {'19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus'} [age_group] Summit Feature. Filter by age group.
+         * @param {'0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus'} [weight_class] Summit Feature. Filter by weight class.
          * @param {boolean} [following] Filter by friends of the authenticated athlete.
-         * @param {number} [clubId] Filter by club.
-         * @param {'this_year' | 'this_month' | 'this_week' | 'today'} [dateRange] Filter by date range, will be in the athlete\&#39;s timezone
-         * @param {number} [contextEntries]
+         * @param {number} [club_id] Filter by club.
+         * @param {'this_year' | 'this_month' | 'this_week' | 'today'} [date_range] Filter by date range, will be in the athlete\&#39;s timezone
+         * @param {number} [context_entries]
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLeaderboardBySegmentId(id: number, gender?: 'M' | 'F', ageGroup?: '19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus', weightClass?: '0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus', following?: boolean, clubId?: number, dateRange?: 'this_year' | 'this_month' | 'this_week' | 'today', contextEntries?: number, page?: number, perPage?: number, options: any = {}): RequestArgs {
+        getLeaderboardBySegmentId(id: number, gender?: 'M' | 'F', age_group?: '19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus', weight_class?: '0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus', following?: boolean, club_id?: number, date_range?: 'this_year' | 'this_month' | 'this_week' | 'today', context_entries?: number, page?: number, per_page?: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getLeaderboardBySegmentId.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getLeaderboardBySegmentId.');
             }
             const localVarPath = `/segments/{id}/leaderboard`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -7163,7 +7201,7 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -7180,38 +7218,37 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['gender'] = gender;
             }
 
-            if (ageGroup !== undefined) {
-                localVarQueryParameter['age_group'] = ageGroup;
+            if (age_group !== undefined) {
+                localVarQueryParameter['age_group'] = age_group;
             }
 
-            if (weightClass !== undefined) {
-                localVarQueryParameter['weight_class'] = weightClass;
+            if (weight_class !== undefined) {
+                localVarQueryParameter['weight_class'] = weight_class;
             }
 
             if (following !== undefined) {
                 localVarQueryParameter['following'] = following;
             }
 
-            if (clubId !== undefined) {
-                localVarQueryParameter['club_id'] = clubId;
+            if (club_id !== undefined) {
+                localVarQueryParameter['club_id'] = club_id;
             }
 
-            if (dateRange !== undefined) {
-                localVarQueryParameter['date_range'] = dateRange;
+            if (date_range !== undefined) {
+                localVarQueryParameter['date_range'] = date_range;
             }
 
-            if (contextEntries !== undefined) {
-                localVarQueryParameter['context_entries'] = contextEntries;
+            if (context_entries !== undefined) {
+                localVarQueryParameter['context_entries'] = context_entries;
             }
 
             if (page !== undefined) {
                 localVarQueryParameter['page'] = page;
             }
 
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
+            if (per_page !== undefined) {
+                localVarQueryParameter['per_page'] = per_page;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -7228,18 +7265,18 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
          * List of the authenticated athlete\'s starred segments. Private segments are filtered out unless requested by a token with read_all scope.
          * @summary List Starred Segments
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLoggedInAthleteStarredSegments(page?: number, perPage?: number, options: any = {}): RequestArgs {
+        getLoggedInAthleteStarredSegments(page?: number, per_page?: number, options: any = {}): RequestArgs {
             const localVarPath = `/segments/starred`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -7256,10 +7293,9 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['page'] = page;
             }
 
-            if (perPage !== undefined) {
-                localVarQueryParameter['per_page'] = perPage;
+            if (per_page !== undefined) {
+                localVarQueryParameter['per_page'] = per_page;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -7282,7 +7318,7 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
         getSegmentById(id: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getSegmentById.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getSegmentById.');
             }
             const localVarPath = `/segments/{id}`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -7291,7 +7327,7 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -7303,7 +7339,6 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -7327,11 +7362,11 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
         starSegment(id: number, starred: boolean, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling starSegment.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling starSegment.');
             }
             // verify required parameter 'starred' is not null or undefined
             if (starred === null || starred === undefined) {
-                throw new RequiredError('starred','Required parameter starred was null or undefined when calling starSegment.');
+                throw new RequiredError('starred', 'Required parameter starred was null or undefined when calling starSegment.');
             }
             const localVarPath = `/segments/{id}/starred`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -7340,7 +7375,7 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'PUT', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
             const localVarFormParams = new URLSearchParams();
@@ -7380,20 +7415,20 @@ export const SegmentsApiAxiosParamCreator = function (configuration?: Configurat
  * SegmentsApi - functional programming interface
  * @export
  */
-export const SegmentsApiFp = function(configuration?: Configuration) {
+export const SegmentsApiFp = function (configuration?: Configuration) {
     return {
         /**
          * Returns the top 10 segments matching a specified query.
          * @summary Explore segments
          * @param {Array<number>} bounds The latitude and longitude for two points describing a rectangular boundary for the search: [southwest corner latitutde, southwest corner longitude, northeast corner latitude, northeast corner longitude]
-         * @param {'running' | 'riding'} [activityType] Desired activity type.
-         * @param {number} [minCat] The minimum climbing category.
-         * @param {number} [maxCat] The maximum climbing category.
+         * @param {'running' | 'riding'} [activity_type] Desired activity type.
+         * @param {number} [min_cat] The minimum climbing category.
+         * @param {number} [max_cat] The maximum climbing category.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exploreSegments(bounds: Array<number>, activityType?: 'running' | 'riding', minCat?: number, maxCat?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExplorerResponse> {
-            const localVarAxiosArgs = SegmentsApiAxiosParamCreator(configuration).exploreSegments(bounds, activityType, minCat, maxCat, options);
+        exploreSegments(bounds: Array<number>, activity_type?: 'running' | 'riding', min_cat?: number, max_cat?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<ExplorerResponse> {
+            const localVarAxiosArgs = SegmentsApiAxiosParamCreator(configuration).exploreSegments(bounds, activity_type, min_cat, max_cat, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7404,19 +7439,19 @@ export const SegmentsApiFp = function(configuration?: Configuration) {
          * @summary Get Segment Leaderboard
          * @param {number} id The identifier of the segment leaderboard.
          * @param {'M' | 'F'} [gender] Filter by gender.
-         * @param {'19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus'} [ageGroup] Summit Feature. Filter by age group.
-         * @param {'0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus'} [weightClass] Summit Feature. Filter by weight class.
+         * @param {'19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus'} [age_group] Summit Feature. Filter by age group.
+         * @param {'0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus'} [weight_class] Summit Feature. Filter by weight class.
          * @param {boolean} [following] Filter by friends of the authenticated athlete.
-         * @param {number} [clubId] Filter by club.
-         * @param {'this_year' | 'this_month' | 'this_week' | 'today'} [dateRange] Filter by date range, will be in the athlete\&#39;s timezone
-         * @param {number} [contextEntries]
+         * @param {number} [club_id] Filter by club.
+         * @param {'this_year' | 'this_month' | 'this_week' | 'today'} [date_range] Filter by date range, will be in the athlete\&#39;s timezone
+         * @param {number} [context_entries]
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLeaderboardBySegmentId(id: number, gender?: 'M' | 'F', ageGroup?: '19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus', weightClass?: '0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus', following?: boolean, clubId?: number, dateRange?: 'this_year' | 'this_month' | 'this_week' | 'today', contextEntries?: number, page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SegmentLeaderboard> {
-            const localVarAxiosArgs = SegmentsApiAxiosParamCreator(configuration).getLeaderboardBySegmentId(id, gender, ageGroup, weightClass, following, clubId, dateRange, contextEntries, page, perPage, options);
+        getLeaderboardBySegmentId(id: number, gender?: 'M' | 'F', age_group?: '19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus', weight_class?: '0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus', following?: boolean, club_id?: number, date_range?: 'this_year' | 'this_month' | 'this_week' | 'today', context_entries?: number, page?: number, per_page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<SegmentLeaderboard> {
+            const localVarAxiosArgs = SegmentsApiAxiosParamCreator(configuration).getLeaderboardBySegmentId(id, gender, age_group, weight_class, following, club_id, date_range, context_entries, page, per_page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7426,12 +7461,12 @@ export const SegmentsApiFp = function(configuration?: Configuration) {
          * List of the authenticated athlete\'s starred segments. Private segments are filtered out unless requested by a token with read_all scope.
          * @summary List Starred Segments
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLoggedInAthleteStarredSegments(page?: number, perPage?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummarySegment>> {
-            const localVarAxiosArgs = SegmentsApiAxiosParamCreator(configuration).getLoggedInAthleteStarredSegments(page, perPage, options);
+        getLoggedInAthleteStarredSegments(page?: number, per_page?: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<SummarySegment>> {
+            const localVarAxiosArgs = SegmentsApiAxiosParamCreator(configuration).getLoggedInAthleteStarredSegments(page, per_page, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7479,44 +7514,44 @@ export const SegmentsApiFactory = function (configuration?: Configuration, baseP
          * Returns the top 10 segments matching a specified query.
          * @summary Explore segments
          * @param {Array<number>} bounds The latitude and longitude for two points describing a rectangular boundary for the search: [southwest corner latitutde, southwest corner longitude, northeast corner latitude, northeast corner longitude]
-         * @param {'running' | 'riding'} [activityType] Desired activity type.
-         * @param {number} [minCat] The minimum climbing category.
-         * @param {number} [maxCat] The maximum climbing category.
+         * @param {'running' | 'riding'} [activity_type] Desired activity type.
+         * @param {number} [min_cat] The minimum climbing category.
+         * @param {number} [max_cat] The maximum climbing category.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        exploreSegments(bounds: Array<number>, activityType?: 'running' | 'riding', minCat?: number, maxCat?: number, options?: any): AxiosPromise<ExplorerResponse> {
-            return SegmentsApiFp(configuration).exploreSegments(bounds, activityType, minCat, maxCat, options)(axios, basePath);
+        exploreSegments(bounds: Array<number>, activity_type?: 'running' | 'riding', min_cat?: number, max_cat?: number, options?: any): AxiosPromise<ExplorerResponse> {
+            return SegmentsApiFp(configuration).exploreSegments(bounds, activity_type, min_cat, max_cat, options)(axios, basePath);
         },
         /**
          * Returns the specified segment leaderboard.
          * @summary Get Segment Leaderboard
          * @param {number} id The identifier of the segment leaderboard.
          * @param {'M' | 'F'} [gender] Filter by gender.
-         * @param {'19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus'} [ageGroup] Summit Feature. Filter by age group.
-         * @param {'0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus'} [weightClass] Summit Feature. Filter by weight class.
+         * @param {'19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus'} [age_group] Summit Feature. Filter by age group.
+         * @param {'0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus'} [weight_class] Summit Feature. Filter by weight class.
          * @param {boolean} [following] Filter by friends of the authenticated athlete.
-         * @param {number} [clubId] Filter by club.
-         * @param {'this_year' | 'this_month' | 'this_week' | 'today'} [dateRange] Filter by date range, will be in the athlete\&#39;s timezone
-         * @param {number} [contextEntries]
+         * @param {number} [club_id] Filter by club.
+         * @param {'this_year' | 'this_month' | 'this_week' | 'today'} [date_range] Filter by date range, will be in the athlete\&#39;s timezone
+         * @param {number} [context_entries]
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLeaderboardBySegmentId(id: number, gender?: 'M' | 'F', ageGroup?: '19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus', weightClass?: '0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus', following?: boolean, clubId?: number, dateRange?: 'this_year' | 'this_month' | 'this_week' | 'today', contextEntries?: number, page?: number, perPage?: number, options?: any): AxiosPromise<SegmentLeaderboard> {
-            return SegmentsApiFp(configuration).getLeaderboardBySegmentId(id, gender, ageGroup, weightClass, following, clubId, dateRange, contextEntries, page, perPage, options)(axios, basePath);
+        getLeaderboardBySegmentId(id: number, gender?: 'M' | 'F', age_group?: '19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus', weight_class?: '0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus', following?: boolean, club_id?: number, date_range?: 'this_year' | 'this_month' | 'this_week' | 'today', context_entries?: number, page?: number, per_page?: number, options?: any): AxiosPromise<SegmentLeaderboard> {
+            return SegmentsApiFp(configuration).getLeaderboardBySegmentId(id, gender, age_group, weight_class, following, club_id, date_range, context_entries, page, per_page, options)(axios, basePath);
         },
         /**
          * List of the authenticated athlete\'s starred segments. Private segments are filtered out unless requested by a token with read_all scope.
          * @summary List Starred Segments
          * @param {number} [page] Page number.
-         * @param {number} [perPage] Number of items per page. Defaults to 30.
+         * @param {number} [per_page] Number of items per page. Defaults to 30.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getLoggedInAthleteStarredSegments(page?: number, perPage?: number, options?: any): AxiosPromise<Array<SummarySegment>> {
-            return SegmentsApiFp(configuration).getLoggedInAthleteStarredSegments(page, perPage, options)(axios, basePath);
+        getLoggedInAthleteStarredSegments(page?: number, per_page?: number, options?: any): AxiosPromise<Array<SummarySegment>> {
+            return SegmentsApiFp(configuration).getLoggedInAthleteStarredSegments(page, per_page, options)(axios, basePath);
         },
         /**
          * Returns the specified segment. read_all scope required in order to retrieve athlete-specific segment information, or to retrieve private segments.
@@ -7553,15 +7588,15 @@ export class SegmentsApi extends StravaApi {
      * Returns the top 10 segments matching a specified query.
      * @summary Explore segments
      * @param {Array<number>} bounds The latitude and longitude for two points describing a rectangular boundary for the search: [southwest corner latitutde, southwest corner longitude, northeast corner latitude, northeast corner longitude]
-     * @param {'running' | 'riding'} [activityType] Desired activity type.
-     * @param {number} [minCat] The minimum climbing category.
-     * @param {number} [maxCat] The maximum climbing category.
+     * @param {'running' | 'riding'} [activity_type] Desired activity type.
+     * @param {number} [min_cat] The minimum climbing category.
+     * @param {number} [max_cat] The maximum climbing category.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SegmentsApi
      */
-    public exploreSegments(bounds: Array<number>, activityType?: 'running' | 'riding', minCat?: number, maxCat?: number, options?: any) {
-        return SegmentsApiFp(this.configuration).exploreSegments(bounds, activityType, minCat, maxCat, options)(this.axios, this.basePath);
+    public exploreSegments(bounds: Array<number>, activity_type?: 'running' | 'riding', min_cat?: number, max_cat?: number, options?: any) {
+        return SegmentsApiFp(this.configuration).exploreSegments(bounds, activity_type, min_cat, max_cat, options)(this.axios, this.basePath);
     }
 
     /**
@@ -7569,33 +7604,33 @@ export class SegmentsApi extends StravaApi {
      * @summary Get Segment Leaderboard
      * @param {number} id The identifier of the segment leaderboard.
      * @param {'M' | 'F'} [gender] Filter by gender.
-     * @param {'19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus'} [ageGroup] Summit Feature. Filter by age group.
-     * @param {'0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus'} [weightClass] Summit Feature. Filter by weight class.
+     * @param {'19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus'} [age_group] Summit Feature. Filter by age group.
+     * @param {'0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus'} [weight_class] Summit Feature. Filter by weight class.
      * @param {boolean} [following] Filter by friends of the authenticated athlete.
-     * @param {number} [clubId] Filter by club.
-     * @param {'this_year' | 'this_month' | 'this_week' | 'today'} [dateRange] Filter by date range, will be in the athlete\&#39;s timezone
-     * @param {number} [contextEntries]
+     * @param {number} [club_id] Filter by club.
+     * @param {'this_year' | 'this_month' | 'this_week' | 'today'} [date_range] Filter by date range, will be in the athlete\&#39;s timezone
+     * @param {number} [context_entries]
      * @param {number} [page] Page number.
-     * @param {number} [perPage] Number of items per page. Defaults to 30.
+     * @param {number} [per_page] Number of items per page. Defaults to 30.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SegmentsApi
      */
-    public getLeaderboardBySegmentId(id: number, gender?: 'M' | 'F', ageGroup?: '19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus', weightClass?: '0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus', following?: boolean, clubId?: number, dateRange?: 'this_year' | 'this_month' | 'this_week' | 'today', contextEntries?: number, page?: number, perPage?: number, options?: any) {
-        return SegmentsApiFp(this.configuration).getLeaderboardBySegmentId(id, gender, ageGroup, weightClass, following, clubId, dateRange, contextEntries, page, perPage, options)(this.axios, this.basePath);
+    public getLeaderboardBySegmentId(id: number, gender?: 'M' | 'F', age_group?: '19.0' | '20_24' | '25_34' | '35_44' | '45_54' | '55_64' | '65_69' | '70_74' | '75_plus', weight_class?: '0_124' | '125_149' | '150_164' | '165_179' | '180_199' | '200_224' | '225_249' | '250_plus' | '0_54' | '55_64' | '65_74' | '75_84' | '85_94' | '95_104' | '105_114' | '115_plus', following?: boolean, club_id?: number, date_range?: 'this_year' | 'this_month' | 'this_week' | 'today', context_entries?: number, page?: number, per_page?: number, options?: any) {
+        return SegmentsApiFp(this.configuration).getLeaderboardBySegmentId(id, gender, age_group, weight_class, following, club_id, date_range, context_entries, page, per_page, options)(this.axios, this.basePath);
     }
 
     /**
      * List of the authenticated athlete\'s starred segments. Private segments are filtered out unless requested by a token with read_all scope.
      * @summary List Starred Segments
      * @param {number} [page] Page number.
-     * @param {number} [perPage] Number of items per page. Defaults to 30.
+     * @param {number} [per_page] Number of items per page. Defaults to 30.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof SegmentsApi
      */
-    public getLoggedInAthleteStarredSegments(page?: number, perPage?: number, options?: any) {
-        return SegmentsApiFp(this.configuration).getLoggedInAthleteStarredSegments(page, perPage, options)(this.axios, this.basePath);
+    public getLoggedInAthleteStarredSegments(page?: number, per_page?: number, options?: any) {
+        return SegmentsApiFp(this.configuration).getLoggedInAthleteStarredSegments(page, per_page, options)(this.axios, this.basePath);
     }
 
     /**
@@ -7637,22 +7672,22 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
          * @summary Get Activity Streams
          * @param {number} id The identifier of the activity.
          * @param {Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>} keys Desired stream types.
-         * @param {boolean} keyByType Must be true.
+         * @param {boolean} key_by_type Must be true.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getActivityStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, keyByType: boolean, options: any = {}): RequestArgs {
+        getActivityStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, key_by_type: boolean, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getActivityStreams.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getActivityStreams.');
             }
             // verify required parameter 'keys' is not null or undefined
             if (keys === null || keys === undefined) {
-                throw new RequiredError('keys','Required parameter keys was null or undefined when calling getActivityStreams.');
+                throw new RequiredError('keys', 'Required parameter keys was null or undefined when calling getActivityStreams.');
             }
-            // verify required parameter 'keyByType' is not null or undefined
-            if (keyByType === null || keyByType === undefined) {
-                throw new RequiredError('keyByType','Required parameter keyByType was null or undefined when calling getActivityStreams.');
+            // verify required parameter 'key_by_type' is not null or undefined
+            if (key_by_type === null || key_by_type === undefined) {
+                throw new RequiredError('key_by_type', 'Required parameter key_by_type was null or undefined when calling getActivityStreams.');
             }
             const localVarPath = `/activities/{id}/streams`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -7661,7 +7696,7 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -7678,10 +7713,9 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['keys'] = keys.join(COLLECTION_FORMATS.csv);
             }
 
-            if (keyByType !== undefined) {
-                localVarQueryParameter['key_by_type'] = keyByType;
+            if (key_by_type !== undefined) {
+                localVarQueryParameter['key_by_type'] = key_by_type;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -7704,7 +7738,7 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
         getRouteStreams(id: number, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getRouteStreams.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getRouteStreams.');
             }
             const localVarPath = `/routes/{id}/streams`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -7713,7 +7747,7 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -7725,7 +7759,6 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -7743,22 +7776,22 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
          * @summary Get Segment Effort Streams
          * @param {number} id The identifier of the segment effort.
          * @param {Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>} keys The types of streams to return.
-         * @param {boolean} keyByType Must be true.
+         * @param {boolean} key_by_type Must be true.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSegmentEffortStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, keyByType: boolean, options: any = {}): RequestArgs {
+        getSegmentEffortStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, key_by_type: boolean, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getSegmentEffortStreams.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getSegmentEffortStreams.');
             }
             // verify required parameter 'keys' is not null or undefined
             if (keys === null || keys === undefined) {
-                throw new RequiredError('keys','Required parameter keys was null or undefined when calling getSegmentEffortStreams.');
+                throw new RequiredError('keys', 'Required parameter keys was null or undefined when calling getSegmentEffortStreams.');
             }
-            // verify required parameter 'keyByType' is not null or undefined
-            if (keyByType === null || keyByType === undefined) {
-                throw new RequiredError('keyByType','Required parameter keyByType was null or undefined when calling getSegmentEffortStreams.');
+            // verify required parameter 'key_by_type' is not null or undefined
+            if (key_by_type === null || key_by_type === undefined) {
+                throw new RequiredError('key_by_type', 'Required parameter key_by_type was null or undefined when calling getSegmentEffortStreams.');
             }
             const localVarPath = `/segment_efforts/{id}/streams`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -7767,7 +7800,7 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -7784,10 +7817,9 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['keys'] = keys.join(COLLECTION_FORMATS.csv);
             }
 
-            if (keyByType !== undefined) {
-                localVarQueryParameter['key_by_type'] = keyByType;
+            if (key_by_type !== undefined) {
+                localVarQueryParameter['key_by_type'] = key_by_type;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -7805,22 +7837,22 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
          * @summary Get Segment Streams
          * @param {number} id The identifier of the segment.
          * @param {Array<'distance' | 'latlng' | 'altitude'>} keys The types of streams to return.
-         * @param {boolean} keyByType Must be true.
+         * @param {boolean} key_by_type Must be true.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSegmentStreams(id: number, keys: Array<'distance' | 'latlng' | 'altitude'>, keyByType: boolean, options: any = {}): RequestArgs {
+        getSegmentStreams(id: number, keys: Array<'distance' | 'latlng' | 'altitude'>, key_by_type: boolean, options: any = {}): RequestArgs {
             // verify required parameter 'id' is not null or undefined
             if (id === null || id === undefined) {
-                throw new RequiredError('id','Required parameter id was null or undefined when calling getSegmentStreams.');
+                throw new RequiredError('id', 'Required parameter id was null or undefined when calling getSegmentStreams.');
             }
             // verify required parameter 'keys' is not null or undefined
             if (keys === null || keys === undefined) {
-                throw new RequiredError('keys','Required parameter keys was null or undefined when calling getSegmentStreams.');
+                throw new RequiredError('keys', 'Required parameter keys was null or undefined when calling getSegmentStreams.');
             }
-            // verify required parameter 'keyByType' is not null or undefined
-            if (keyByType === null || keyByType === undefined) {
-                throw new RequiredError('keyByType','Required parameter keyByType was null or undefined when calling getSegmentStreams.');
+            // verify required parameter 'key_by_type' is not null or undefined
+            if (key_by_type === null || key_by_type === undefined) {
+                throw new RequiredError('key_by_type', 'Required parameter key_by_type was null or undefined when calling getSegmentStreams.');
             }
             const localVarPath = `/segments/{id}/streams`
                 .replace(`{${"id"}}`, encodeURIComponent(String(id)));
@@ -7829,7 +7861,7 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -7846,10 +7878,9 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['keys'] = keys.join(COLLECTION_FORMATS.csv);
             }
 
-            if (keyByType !== undefined) {
-                localVarQueryParameter['key_by_type'] = keyByType;
+            if (key_by_type !== undefined) {
+                localVarQueryParameter['key_by_type'] = key_by_type;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -7869,19 +7900,19 @@ export const StreamsApiAxiosParamCreator = function (configuration?: Configurati
  * StreamsApi - functional programming interface
  * @export
  */
-export const StreamsApiFp = function(configuration?: Configuration) {
+export const StreamsApiFp = function (configuration?: Configuration) {
     return {
         /**
          * Returns the given activity\'s streams. Requires activity:read scope. Requires activity:read_all scope for Only Me activities.
          * @summary Get Activity Streams
          * @param {number} id The identifier of the activity.
          * @param {Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>} keys Desired stream types.
-         * @param {boolean} keyByType Must be true.
+         * @param {boolean} key_by_type Must be true.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getActivityStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, keyByType: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSet> {
-            const localVarAxiosArgs = StreamsApiAxiosParamCreator(configuration).getActivityStreams(id, keys, keyByType, options);
+        getActivityStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, key_by_type: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSet> {
+            const localVarAxiosArgs = StreamsApiAxiosParamCreator(configuration).getActivityStreams(id, keys, key_by_type, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7906,12 +7937,12 @@ export const StreamsApiFp = function(configuration?: Configuration) {
          * @summary Get Segment Effort Streams
          * @param {number} id The identifier of the segment effort.
          * @param {Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>} keys The types of streams to return.
-         * @param {boolean} keyByType Must be true.
+         * @param {boolean} key_by_type Must be true.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSegmentEffortStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, keyByType: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSet> {
-            const localVarAxiosArgs = StreamsApiAxiosParamCreator(configuration).getSegmentEffortStreams(id, keys, keyByType, options);
+        getSegmentEffortStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, key_by_type: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSet> {
+            const localVarAxiosArgs = StreamsApiAxiosParamCreator(configuration).getSegmentEffortStreams(id, keys, key_by_type, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7922,12 +7953,12 @@ export const StreamsApiFp = function(configuration?: Configuration) {
          * @summary Get Segment Streams
          * @param {number} id The identifier of the segment.
          * @param {Array<'distance' | 'latlng' | 'altitude'>} keys The types of streams to return.
-         * @param {boolean} keyByType Must be true.
+         * @param {boolean} key_by_type Must be true.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSegmentStreams(id: number, keys: Array<'distance' | 'latlng' | 'altitude'>, keyByType: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSet> {
-            const localVarAxiosArgs = StreamsApiAxiosParamCreator(configuration).getSegmentStreams(id, keys, keyByType, options);
+        getSegmentStreams(id: number, keys: Array<'distance' | 'latlng' | 'altitude'>, key_by_type: boolean, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<StreamSet> {
+            const localVarAxiosArgs = StreamsApiAxiosParamCreator(configuration).getSegmentStreams(id, keys, key_by_type, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -7947,12 +7978,12 @@ export const StreamsApiFactory = function (configuration?: Configuration, basePa
          * @summary Get Activity Streams
          * @param {number} id The identifier of the activity.
          * @param {Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>} keys Desired stream types.
-         * @param {boolean} keyByType Must be true.
+         * @param {boolean} key_by_type Must be true.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getActivityStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, keyByType: boolean, options?: any): AxiosPromise<StreamSet> {
-            return StreamsApiFp(configuration).getActivityStreams(id, keys, keyByType, options)(axios, basePath);
+        getActivityStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, key_by_type: boolean, options?: any): AxiosPromise<StreamSet> {
+            return StreamsApiFp(configuration).getActivityStreams(id, keys, key_by_type, options)(axios, basePath);
         },
         /**
          * Returns the given route\'s streams. Requires read_all scope for private routes.
@@ -7969,24 +8000,24 @@ export const StreamsApiFactory = function (configuration?: Configuration, basePa
          * @summary Get Segment Effort Streams
          * @param {number} id The identifier of the segment effort.
          * @param {Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>} keys The types of streams to return.
-         * @param {boolean} keyByType Must be true.
+         * @param {boolean} key_by_type Must be true.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSegmentEffortStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, keyByType: boolean, options?: any): AxiosPromise<StreamSet> {
-            return StreamsApiFp(configuration).getSegmentEffortStreams(id, keys, keyByType, options)(axios, basePath);
+        getSegmentEffortStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, key_by_type: boolean, options?: any): AxiosPromise<StreamSet> {
+            return StreamsApiFp(configuration).getSegmentEffortStreams(id, keys, key_by_type, options)(axios, basePath);
         },
         /**
          * Returns the given segment\'s streams. Requires read_all scope for private segments.
          * @summary Get Segment Streams
          * @param {number} id The identifier of the segment.
          * @param {Array<'distance' | 'latlng' | 'altitude'>} keys The types of streams to return.
-         * @param {boolean} keyByType Must be true.
+         * @param {boolean} key_by_type Must be true.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getSegmentStreams(id: number, keys: Array<'distance' | 'latlng' | 'altitude'>, keyByType: boolean, options?: any): AxiosPromise<StreamSet> {
-            return StreamsApiFp(configuration).getSegmentStreams(id, keys, keyByType, options)(axios, basePath);
+        getSegmentStreams(id: number, keys: Array<'distance' | 'latlng' | 'altitude'>, key_by_type: boolean, options?: any): AxiosPromise<StreamSet> {
+            return StreamsApiFp(configuration).getSegmentStreams(id, keys, key_by_type, options)(axios, basePath);
         },
     };
 };
@@ -8003,13 +8034,13 @@ export class StreamsApi extends StravaApi {
      * @summary Get Activity Streams
      * @param {number} id The identifier of the activity.
      * @param {Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>} keys Desired stream types.
-     * @param {boolean} keyByType Must be true.
+     * @param {boolean} key_by_type Must be true.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StreamsApi
      */
-    public getActivityStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, keyByType: boolean, options?: any) {
-        return StreamsApiFp(this.configuration).getActivityStreams(id, keys, keyByType, options)(this.axios, this.basePath);
+    public getActivityStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, key_by_type: boolean, options?: any) {
+        return StreamsApiFp(this.configuration).getActivityStreams(id, keys, key_by_type, options)(this.axios, this.basePath);
     }
 
     /**
@@ -8029,13 +8060,13 @@ export class StreamsApi extends StravaApi {
      * @summary Get Segment Effort Streams
      * @param {number} id The identifier of the segment effort.
      * @param {Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>} keys The types of streams to return.
-     * @param {boolean} keyByType Must be true.
+     * @param {boolean} key_by_type Must be true.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StreamsApi
      */
-    public getSegmentEffortStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, keyByType: boolean, options?: any) {
-        return StreamsApiFp(this.configuration).getSegmentEffortStreams(id, keys, keyByType, options)(this.axios, this.basePath);
+    public getSegmentEffortStreams(id: number, keys: Array<'time' | 'distance' | 'latlng' | 'altitude' | 'velocity_smooth' | 'heartrate' | 'cadence' | 'watts' | 'temp' | 'moving' | 'grade_smooth'>, key_by_type: boolean, options?: any) {
+        return StreamsApiFp(this.configuration).getSegmentEffortStreams(id, keys, key_by_type, options)(this.axios, this.basePath);
     }
 
     /**
@@ -8043,13 +8074,13 @@ export class StreamsApi extends StravaApi {
      * @summary Get Segment Streams
      * @param {number} id The identifier of the segment.
      * @param {Array<'distance' | 'latlng' | 'altitude'>} keys The types of streams to return.
-     * @param {boolean} keyByType Must be true.
+     * @param {boolean} key_by_type Must be true.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof StreamsApi
      */
-    public getSegmentStreams(id: number, keys: Array<'distance' | 'latlng' | 'altitude'>, keyByType: boolean, options?: any) {
-        return StreamsApiFp(this.configuration).getSegmentStreams(id, keys, keyByType, options)(this.axios, this.basePath);
+    public getSegmentStreams(id: number, keys: Array<'distance' | 'latlng' | 'altitude'>, key_by_type: boolean, options?: any) {
+        return StreamsApiFp(this.configuration).getSegmentStreams(id, keys, key_by_type, options)(this.axios, this.basePath);
     }
 
 }
@@ -8069,19 +8100,19 @@ export const UploadsApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} [description] The desired description of the resulting activity.
          * @param {string} [trainer] Whether the resulting activity should be marked as having been performed on a trainer.
          * @param {string} [commute] Whether the resulting activity should be tagged as a commute.
-         * @param {string} [dataType] The format of the uploaded file.
-         * @param {string} [externalId] The desired external identifier of the resulting activity.
+         * @param {string} [data_type] The format of the uploaded file.
+         * @param {string} [external_id] The desired external identifier of the resulting activity.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createUpload(file?: any, name?: string, description?: string, trainer?: string, commute?: string, dataType?: string, externalId?: string, options: any = {}): RequestArgs {
+        createUpload(file?: any, name?: string, description?: string, trainer?: string, commute?: string, data_type?: string, external_id?: string, options: any = {}): RequestArgs {
             const localVarPath = `/uploads`;
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
             const localVarFormParams = new FormData();
@@ -8116,12 +8147,12 @@ export const UploadsApiAxiosParamCreator = function (configuration?: Configurati
                 localVarFormParams.append('commute', commute as any);
             }
 
-            if (dataType !== undefined) {
-                localVarFormParams.append('data_type', dataType as any);
+            if (data_type !== undefined) {
+                localVarFormParams.append('data_type', data_type as any);
             }
 
-            if (externalId !== undefined) {
-                localVarFormParams.append('external_id', externalId as any);
+            if (external_id !== undefined) {
+                localVarFormParams.append('external_id', external_id as any);
             }
 
 
@@ -8141,23 +8172,23 @@ export const UploadsApiAxiosParamCreator = function (configuration?: Configurati
         /**
          * Returns an upload for a given identifier. Requires activity:write scope.
          * @summary Get Upload
-         * @param {number} uploadId The identifier of the upload.
+         * @param {number} upload_id The identifier of the upload.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getUploadById(uploadId: number, options: any = {}): RequestArgs {
-            // verify required parameter 'uploadId' is not null or undefined
-            if (uploadId === null || uploadId === undefined) {
-                throw new RequiredError('uploadId','Required parameter uploadId was null or undefined when calling getUploadById.');
+        getUploadById(upload_id: number, options: any = {}): RequestArgs {
+            // verify required parameter 'upload_id' is not null or undefined
+            if (upload_id === null || upload_id === undefined) {
+                throw new RequiredError('upload_id', 'Required parameter upload_id was null or undefined when calling getUploadById.');
             }
             const localVarPath = `/uploads/{uploadId}`
-                .replace(`{${"uploadId"}}`, encodeURIComponent(String(uploadId)));
+                .replace(`{${"uploadId"}}`, encodeURIComponent(String(upload_id)));
             const localVarUrlObj = globalImportUrl.parse(localVarPath, true);
             let baseOptions;
             if (configuration) {
                 baseOptions = configuration.baseOptions;
             }
-            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarRequestOptions = {method: 'GET', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
@@ -8169,7 +8200,6 @@ export const UploadsApiAxiosParamCreator = function (configuration?: Configurati
                     : configuration.accessToken;
                 localVarHeaderParameter["Authorization"] = "Bearer " + localVarAccessTokenValue;
             }
-
 
 
             localVarUrlObj.query = {...localVarUrlObj.query, ...localVarQueryParameter, ...options.query};
@@ -8189,7 +8219,7 @@ export const UploadsApiAxiosParamCreator = function (configuration?: Configurati
  * UploadsApi - functional programming interface
  * @export
  */
-export const UploadsApiFp = function(configuration?: Configuration) {
+export const UploadsApiFp = function (configuration?: Configuration) {
     return {
         /**
          * Uploads a new data file to create an activity from. Requires activity:write scope.
@@ -8199,13 +8229,13 @@ export const UploadsApiFp = function(configuration?: Configuration) {
          * @param {string} [description] The desired description of the resulting activity.
          * @param {string} [trainer] Whether the resulting activity should be marked as having been performed on a trainer.
          * @param {string} [commute] Whether the resulting activity should be tagged as a commute.
-         * @param {string} [dataType] The format of the uploaded file.
-         * @param {string} [externalId] The desired external identifier of the resulting activity.
+         * @param {string} [data_type] The format of the uploaded file.
+         * @param {string} [external_id] The desired external identifier of the resulting activity.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createUpload(file?: any, name?: string, description?: string, trainer?: string, commute?: string, dataType?: string, externalId?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Upload> {
-            const localVarAxiosArgs = UploadsApiAxiosParamCreator(configuration).createUpload(file, name, description, trainer, commute, dataType, externalId, options);
+        createUpload(file?: any, name?: string, description?: string, trainer?: string, commute?: string, data_type?: string, external_id?: string, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Upload> {
+            const localVarAxiosArgs = UploadsApiAxiosParamCreator(configuration).createUpload(file, name, description, trainer, commute, data_type, external_id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -8214,12 +8244,12 @@ export const UploadsApiFp = function(configuration?: Configuration) {
         /**
          * Returns an upload for a given identifier. Requires activity:write scope.
          * @summary Get Upload
-         * @param {number} uploadId The identifier of the upload.
+         * @param {number} upload_id The identifier of the upload.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getUploadById(uploadId: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Upload> {
-            const localVarAxiosArgs = UploadsApiAxiosParamCreator(configuration).getUploadById(uploadId, options);
+        getUploadById(upload_id: number, options?: any): (axios?: AxiosInstance, basePath?: string) => AxiosPromise<Upload> {
+            const localVarAxiosArgs = UploadsApiAxiosParamCreator(configuration).getUploadById(upload_id, options);
             return (axios: AxiosInstance = globalAxios, basePath: string = BASE_PATH) => {
                 const axiosRequestArgs = {...localVarAxiosArgs.options, url: basePath + localVarAxiosArgs.url};
                 return axios.request(axiosRequestArgs);
@@ -8242,23 +8272,23 @@ export const UploadsApiFactory = function (configuration?: Configuration, basePa
          * @param {string} [description] The desired description of the resulting activity.
          * @param {string} [trainer] Whether the resulting activity should be marked as having been performed on a trainer.
          * @param {string} [commute] Whether the resulting activity should be tagged as a commute.
-         * @param {string} [dataType] The format of the uploaded file.
-         * @param {string} [externalId] The desired external identifier of the resulting activity.
+         * @param {string} [data_type] The format of the uploaded file.
+         * @param {string} [external_id] The desired external identifier of the resulting activity.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createUpload(file?: any, name?: string, description?: string, trainer?: string, commute?: string, dataType?: string, externalId?: string, options?: any): AxiosPromise<Upload> {
-            return UploadsApiFp(configuration).createUpload(file, name, description, trainer, commute, dataType, externalId, options)(axios, basePath);
+        createUpload(file?: any, name?: string, description?: string, trainer?: string, commute?: string, data_type?: string, external_id?: string, options?: any): AxiosPromise<Upload> {
+            return UploadsApiFp(configuration).createUpload(file, name, description, trainer, commute, data_type, external_id, options)(axios, basePath);
         },
         /**
          * Returns an upload for a given identifier. Requires activity:write scope.
          * @summary Get Upload
-         * @param {number} uploadId The identifier of the upload.
+         * @param {number} upload_id The identifier of the upload.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getUploadById(uploadId: number, options?: any): AxiosPromise<Upload> {
-            return UploadsApiFp(configuration).getUploadById(uploadId, options)(axios, basePath);
+        getUploadById(upload_id: number, options?: any): AxiosPromise<Upload> {
+            return UploadsApiFp(configuration).getUploadById(upload_id, options)(axios, basePath);
         },
     };
 };
@@ -8278,26 +8308,26 @@ export class UploadsApi extends StravaApi {
      * @param {string} [description] The desired description of the resulting activity.
      * @param {string} [trainer] Whether the resulting activity should be marked as having been performed on a trainer.
      * @param {string} [commute] Whether the resulting activity should be tagged as a commute.
-     * @param {string} [dataType] The format of the uploaded file.
-     * @param {string} [externalId] The desired external identifier of the resulting activity.
+     * @param {string} [data_type] The format of the uploaded file.
+     * @param {string} [external_id] The desired external identifier of the resulting activity.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UploadsApi
      */
-    public createUpload(file?: any, name?: string, description?: string, trainer?: string, commute?: string, dataType?: string, externalId?: string, options?: any) {
-        return UploadsApiFp(this.configuration).createUpload(file, name, description, trainer, commute, dataType, externalId, options)(this.axios, this.basePath);
+    public createUpload(file?: any, name?: string, description?: string, trainer?: string, commute?: string, data_type?: string, external_id?: string, options?: any) {
+        return UploadsApiFp(this.configuration).createUpload(file, name, description, trainer, commute, data_type, external_id, options)(this.axios, this.basePath);
     }
 
     /**
      * Returns an upload for a given identifier. Requires activity:write scope.
      * @summary Get Upload
-     * @param {number} uploadId The identifier of the upload.
+     * @param {number} upload_id The identifier of the upload.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof UploadsApi
      */
-    public getUploadById(uploadId: number, options?: any) {
-        return UploadsApiFp(this.configuration).getUploadById(uploadId, options)(this.axios, this.basePath);
+    public getUploadById(upload_id: number, options?: any) {
+        return UploadsApiFp(this.configuration).getUploadById(upload_id, options)(this.axios, this.basePath);
     }
 
 }
