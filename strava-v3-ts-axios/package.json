@@ -25,7 +25,7 @@
     "url": "git+https://github.com/bergac/strava-api-v3.git"
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.21.1"
   },
   "peerDependencies": {
     "@types/node": "^12.12.31",
